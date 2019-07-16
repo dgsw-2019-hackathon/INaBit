@@ -197,7 +197,8 @@
     <Resource Include="아이콘\comment.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="디자인\BasePicture.jpeg" />
+    <Resource Include="아이콘\icon_write.png" />
+    <Resource Include="아이콘\search_icon.png" />
   </ItemGroup>
   <PropertyGroup>
     <StartArguments />

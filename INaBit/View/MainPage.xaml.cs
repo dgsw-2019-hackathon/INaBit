@@ -33,8 +33,8 @@ namespace INaBit
 
         public void LoginDone()
         {
-            lstLogin.Visibility = Visibility.Collapsed;
-            lstMainPage.Visibility = Visibility.Visible;
+            LoginCtrl.Visibility = Visibility.Collapsed;
+            MainCtrl.Visibility = Visibility.Visible;
         }
     }
 }
