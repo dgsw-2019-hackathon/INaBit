@@ -8,9 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="#261182" Margin="0,0,-70,-1088">
         <Grid HorizontalAlignment="Center" Width="425" Background="White" Margin="219,274,226,0" Height="287" VerticalAlignment="Top">
-            <Grid.Effect>
-                <DropShadowEffect BlurRadius="100"/>
-            </Grid.Effect>
+           
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"/>
                 <RowDefinition Height="*"/>
@@ -27,9 +25,7 @@
                 <PasswordBox Height="30" Width="200" Background="Gray" Margin="124,66,101,91" CaretBrush="Black"/>
                 
                 <Button Width="150" Height="30" Margin="137,111,138,46" Background="#FF404BB4" Foreground="Black" FontWeight="Bold">
-                    <Button.Effect>
-                        <DropShadowEffect BlurRadius="3" Direction="1000"/>
-                    </Button.Effect>
+                  
                     <TextBlock FontSize="20" Foreground="White">
                     Login
                     </TextBlock>
