@@ -1,4 +1,5 @@
-﻿using System;
+﻿using INaBit.ViewModel.Posts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,12 @@ namespace INaBit.Controls.Posts
     /// </summary>
     public partial class NormalPostItemControl : UserControl
     {
+        public NormalPostItemViewModel viewModel = new NormalPostItemViewModel();
         public NormalPostItemControl()
         {
             InitializeComponent();
+            this.DataContext = viewModel;
+
         }
     }
 }

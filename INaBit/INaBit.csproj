@@ -172,6 +172,7 @@
     <Compile Include="Model\Posts\PostModel.cs" />
     <Compile Include="ViewModel\LoginControlViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\Posts\NormalPostItemViewModel.cs" />
     <Compile Include="ViewModel\Posts\NormalPostViewModel.cs" />
     <Compile Include="ViewModel\Posts\PostItemViewModel.cs" />
     <Compile Include="ViewModel\Posts\PostsViewModel.cs" />
