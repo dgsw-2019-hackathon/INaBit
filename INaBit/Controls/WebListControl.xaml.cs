@@ -23,6 +23,7 @@ namespace INaBit.Controls
         public WebListControl()
         {
             InitializeComponent();
+            this.DataContext = App.WebPostViewModel;
         }
     }
 }

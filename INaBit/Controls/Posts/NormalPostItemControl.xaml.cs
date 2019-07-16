@@ -1,4 +1,5 @@
-﻿using System;
+﻿using INaBit.ViewModel.Posts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,17 +14,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace INaBit.Controls
+namespace INaBit.Controls.Posts
 {
     /// <summary>
-    /// AppListControl.xaml에 대한 상호 작용 논리
+    /// NormalPostItemControl.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class AppListControl : UserControl
+    public partial class NormalPostItemControl : UserControl
     {
-        public AppListControl()
+        public NormalPostItemViewModel viewModel;
+        public NormalPostItemControl()
         {
             InitializeComponent();
-            this.DataContext = App.AppPostViewModel;
+            viewModel = new NormalPostItemViewModel();
+            this.DataContext = viewModel;
         }
     }
 }
