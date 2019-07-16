@@ -14,7 +14,19 @@ namespace INaBit.ViewModel
     {
         public delegate void LoginDoneCommand();
         public LoginDoneCommand loginDone;
+
+
+
         public ICommand LoginCommand { get; set; }
+
+
+        private string _pwd;
+        public string Pwd
+        {
+            get => _pwd;
+            set => SetProperty(ref _pwd, value);
+        }
+
 
         public LoginControlViewModel()
         {
@@ -23,6 +35,7 @@ namespace INaBit.ViewModel
 
         private void OnLogin()
         {
+            
             MessageBox.Show("로그인에 성공하였습니다.");
             loginDone?.Invoke();
         }

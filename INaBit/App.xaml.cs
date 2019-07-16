@@ -22,5 +22,6 @@ namespace INaBit
 
         public static PostsViewModel postsViewModel = new PostsViewModel();
         public static LoginControlViewModel loginViewModel = new LoginControlViewModel();
+        public static MainViewModel mainViewModel = new MainViewModel();
     }
 }

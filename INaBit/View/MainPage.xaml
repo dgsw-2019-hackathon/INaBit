@@ -49,8 +49,8 @@
         </ControlTemplate>
 
     </Page.Resources>
-    
-    <Grid>
+
+    <Grid Background="#ff282859">
         <ScrollViewer x:Name="MainCtrl" Background="#ff282859"
                       Visibility="Visible">
             <StackPanel HorizontalAlignment="Center"
@@ -59,6 +59,7 @@
                     
                     <TextBox Template="{StaticResource TextBoxBaseControlTemplate}"
                              Width="560" Height="50" FontSize="24"
+                             VerticalContentAlignment="Center"
                              BorderBrush="Transparent"/>
 
                     <Image Height="50" Source="/아이콘/search_icon.png"
@@ -79,9 +80,9 @@
                             Grid.ColumnSpan="2" Margin="0,0,0,50"
                             Height="80" Width="700">
                         <StackPanel Orientation="Horizontal">
-                            <Button Content="아이디어" Style="{StaticResource ButtonStyle}"/>
-                            <Button Content="유용한 웹" Style="{StaticResource ButtonStyle}"/>
-                            <Button Content="유용한 앱" Style="{StaticResource ButtonStyle}"/>
+                            <Button Content="아이디어" Command="{Binding IdeaPageCommand}" Style="{StaticResource ButtonStyle}"/>
+                            <Button Content="유용한 웹" Command="{Binding WebPageCommand}" Style="{StaticResource ButtonStyle}"/>
+                            <Button Content="유용한 앱" Command="{Binding AppPageCommand}" Style="{StaticResource ButtonStyle}"/>
                         </StackPanel>
                     </Border>
 
@@ -99,7 +100,9 @@
             <ctrl:LoginControl/>
         </ScrollViewer>
         <ScrollViewer x:Name="PageCtrl" Visibility="Collapsed">
-            <UserControl x:Name="Ctrl"/>
+            <Grid x:Name="PageGrid">
+                
+            </Grid>
         </ScrollViewer>
     </Grid>
 </Page>

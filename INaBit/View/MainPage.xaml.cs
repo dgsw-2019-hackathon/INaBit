@@ -20,10 +20,12 @@ namespace INaBit
     /// </summary>
     public partial class Page1 : Page
     {
+
         public Page1()
         {
             InitializeComponent();
             InitViewControl();
+            this.DataContext = App.mainViewModel;
         }
 
         private void InitViewControl()
@@ -39,14 +41,14 @@ namespace INaBit
         }
         public void SetViewMain()
         {
-            Ctrl.Visibility = Visibility.Collapsed;
+            PageCtrl.Visibility = Visibility.Collapsed;
             MainCtrl.Visibility = Visibility.Visible;
         }
 
         public void PageView(UserControl control)
         {
-            Ctrl = control;
-            Ctrl.Visibility = Visibility.Visible;
+            PageGrid.Children.Add(control);
+            PageCtrl.Visibility = Visibility.Visible;
             MainCtrl.Visibility = Visibility.Collapsed;
         }
     }
