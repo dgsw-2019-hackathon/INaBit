@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:INaBit.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#261182" Margin="0,0,-70,-1088">
+    <Grid Background="#ff282859" Margin="0,0,-70,-1088">
         <Grid HorizontalAlignment="Center" Width="425" Background="White" Margin="219,274,226,0" Height="287" VerticalAlignment="Top">
            
             <Grid.RowDefinitions>
