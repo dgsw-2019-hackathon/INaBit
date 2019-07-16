@@ -64,8 +64,8 @@
                 <SolidColorBrush Color="#FF002646"/>
             </Grid.Background>
             <Image Margin="0,-18,0,-28" HorizontalAlignment="Left" Width="247" Source="/디자인/inavitLogo.png" Grid.ColumnSpan="2"/>
-            <TextBlock FontSize="15" Margin="1570,28,106,15" Foreground="White" Grid.Column="1" HorizontalAlignment="Right">로그인</TextBlock>
-            <TextBlock FontSize="15" Margin="1644,28,11,15" Foreground="White" Grid.Column="1" HorizontalAlignment="Right">회원가입</TextBlock>
+            <TextBlock FontSize="15" Margin="0,25,135,18" Foreground="White" Grid.Column="1" HorizontalAlignment="Right">로그인</TextBlock>
+            <TextBlock FontSize="15" Margin="0,25,40,18" Foreground="White" Grid.Column="1" HorizontalAlignment="Right">회원가입</TextBlock>
         </Grid>
         <Grid Grid.Row="1">
             <Grid>
@@ -77,7 +77,6 @@
                     <StackPanel HorizontalAlignment="Center"
                         VerticalAlignment="Center">
                         <Grid Margin="0,0,0,-80" Width="600" Height="50">
-
                             <TextBox Template="{StaticResource TextBoxBaseControlTemplate}"
                              Width="560" Height="50" FontSize="24"
                              VerticalContentAlignment="Center"
@@ -118,9 +117,15 @@
                     </StackPanel>
                 </ScrollViewer>
                 <ScrollViewer x:Name="LoginCtrl" Visibility="Collapsed">
+                    <ScrollViewer.Background>
+                        <ImageBrush ImageSource="/디자인/BackGroundImage.jpg"/>
+                    </ScrollViewer.Background>
                     <ctrl:LoginControl/>
                 </ScrollViewer>
                 <ScrollViewer x:Name="PageCtrl" Visibility="Collapsed">
+                    <ScrollViewer.Background>
+                        <ImageBrush ImageSource="/디자인/BackGroundImage.jpg"/>
+                    </ScrollViewer.Background>
                     <Grid x:Name="PageGrid">
 
                     </Grid>
