@@ -5,35 +5,55 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:INaBit.Controls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#ff282859" Margin="0,0,-70,-1088">
-        <Grid HorizontalAlignment="Center" Width="425" Background="White" Margin="219,274,226,0" Height="287" VerticalAlignment="Top">
-           
-            <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0" Background="#FF292959">
-                <TextBlock Margin="10,19,132,-19" FontSize="40" FontFamily="Segoe UI Black" Text="로그인" Foreground="White" />
-            </Grid>
-            <Grid Grid.Row="1">
-                
-                <TextBlock FontSize="20" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" Background="White" Margin="74,23,319,135">ID</TextBlock>
-                <TextBox FontSize="20" Height="30" Width="200" Background="Gray" Margin="124,23,101,134" CaretBrush="Black"
-                         Text="{Binding Id}"/>
-                
-                <TextBlock FontSize="20" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" Background="White" Margin="74,71,316,91">PW</TextBlock>
-                <PasswordBox Height="30" Width="200" Background="Gray" Margin="124,66,101,91" CaretBrush="Black"/>
-                
-                <Button Width="150" Height="30" Margin="137,111,138,46" Background="#FF404BB4" Foreground="Black" FontWeight="Bold"
+             d:DesignHeight="1000" d:DesignWidth="800">
+    <Grid>
+        <Grid Width="800" Height="100" HorizontalAlignment="Center" Margin="0,118,0,0" VerticalAlignment="Top">
+            <Border  BorderThickness="10" CornerRadius="10" Background="White" Margin="56,448,424,-444">
+                <Border.BorderBrush>
+                    <SolidColorBrush Color="Black"/>
+                </Border.BorderBrush>
+                <TextBlock FontSize="40" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Margin="43,22,64,0" TextAlignment="Center" Text="로그인"/>
+            </Border>
+        </Grid>
+
+        <Grid Width="800" Height="500" Margin="0,290,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="537*"/>
+                <ColumnDefinition Width="263*"/>
+            </Grid.ColumnDefinitions>
+            <Border  BorderThickness="10" CornerRadius="20" Margin="5,362,15,-206" BorderBrush="Black" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.187"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.997"/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Border.Background>
+                    <SolidColorBrush Color="White" Opacity="0.3"/>
+                </Border.Background>
+            </Border>
+            <TextBlock FontSize="30" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" Margin="203,450,297,20">
+                <TextBlock.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </TextBlock.Background>ID</TextBlock>
+            <TextBox FontSize="30" Height="30" Background="White" Margin="263,450,240,20" CaretBrush="Black"
+                         Text="{Binding Id}"  BorderBrush="Black" BorderThickness="3" Grid.ColumnSpan="2"/>
+
+            <TextBlock FontSize="30" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" Margin="203,510,279,-38">
+                <TextBlock.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </TextBlock.Background>PW</TextBlock>
+            <PasswordBox FontSize="30" Height="30" Background="White" Margin="263,510,240,-40" CaretBrush="Black"  BorderBrush="Black" BorderThickness="3" Grid.ColumnSpan="2"/>
+
+            <Button Margin="302,590,74,-136" Background="#FF33386A" Foreground="Black" FontWeight="Bold"
                         Command="{Binding LoginCommand}">
-                  
-                    <TextBlock FontSize="20" Foreground="White">
+
+                <TextBlock FontSize="20" Foreground="White">
                     Login
-                    </TextBlock>
-                </Button>
-                <TextBlock Margin="185,160,186,10" FontFamily="Microsoft Tai Le" FontWeight="Bold" Foreground="Black">회원가입</TextBlock>
-            </Grid>
+                </TextBlock>
+            </Button>
         </Grid>
     </Grid>
 </UserControl>
