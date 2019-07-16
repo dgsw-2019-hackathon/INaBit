@@ -84,8 +84,6 @@
             </Border>
             <TextBlock Background="White" Margin="-113,-89,-108,128" FontSize="20" TextWrapping="Wrap" FontWeight="Bold" Grid.ColumnSpan="2"></TextBlock>
         </Grid>
-
-
         <Grid Width="800" Height="62" Margin="0,820,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Grid.Background>
                 <SolidColorBrush Color="White" Opacity="0"/>
