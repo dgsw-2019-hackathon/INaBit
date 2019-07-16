@@ -84,9 +84,13 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\MainControl.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Controls\PostListControl.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Posts\PostItemControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -102,9 +106,13 @@
     <Compile Include="Controls\JoinControl.xaml.cs">
       <DependentUpon>JoinControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\MainControl.xaml.cs">
-      <DependentUpon>MainControl.xaml</DependentUpon>
+    <Compile Include="Controls\PostListControl.xaml.cs">
+      <DependentUpon>PostListControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Posts\PostItemControl.xaml.cs">
+      <DependentUpon>PostItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Posts\PostModel.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
       <SubType>Code</SubType>
