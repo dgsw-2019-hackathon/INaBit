@@ -6,10 +6,17 @@
              xmlns:local="clr-namespace:INaBit.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="800">
-    <Grid Background="#FF282859">
-        <TextBlock FontSize="20" FontWeight="Bold" Foreground="White" Margin="100,81,792,1387">유용한 웹</TextBlock>
-        <Grid Background="#FF706DBD" Width="800" Height="100" HorizontalAlignment="Center" Margin="0,118,0,0" VerticalAlignment="Top">
-            <Image Height="100" Source="/Assets/HandLight.png" Margin="0,-2,696,2" RenderTransformOrigin="0.5,0.5">
+    <Grid>
+        <Grid Width="800" Height="100" HorizontalAlignment="Center" Margin="0,118,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border  BorderThickness="10" CornerRadius="10" Background="White" Margin="-230,-76,-209,76">
+                <Border.BorderBrush>
+                    <SolidColorBrush Color="Black" Opacity="0.3"/>
+                </Border.BorderBrush>
+            </Border>
+            <Image Height="100" Source="/Assets/HandLight.png" Margin="-234,-76,930,76" RenderTransformOrigin="0.5,0.5">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleX="-1"/>
@@ -19,19 +26,56 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <TextBlock FontSize="40" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Margin="106,26,96,24" TextAlignment="Center" Text="앱 추천하기"/>
+            <TextBlock FontSize="40" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Height="200" Margin="210,-50,215,-50" TextAlignment="Center" Text="앱 추천하기"/>
         </Grid>
 
-        <Grid Background="#FF706DBD" Width="800" Height="500" Margin="0,290,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <TextBox TextWrapping="Wrap" FontSize="20" Width="780" Height="500" Background="White" Margin="10,10,10,50"></TextBox>
-
-            <Button Margin="10,460,702,10" Click="Button_Click" Background="White">
-                <TextBlock FontWeight="Bold" FontFamily="Yu Gothic UI Semibold" FontSize="15">사진 올리기</TextBlock>
+        <Grid Width="800" Height="500" Margin="0,290,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Border  BorderThickness="10" CornerRadius="20" Margin="-146,-117,-138,98" BorderBrush="Black" RenderTransformOrigin="0.5,0.5">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.187"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.997"/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Border.Background>
+                    <SolidColorBrush Color="White" Opacity="0.3"/>
+                </Border.Background>
+            </Border>
+            <TextBlock FontSize="30" FontWeight="Bold" Margin="-112,-82,842,543">제목:</TextBlock>
+            <TextBox FontSize="25" Background="White" Margin="-37,-88,-113,535" BorderBrush="Black" BorderThickness="4"/>
+            <TextBox TextWrapping="Wrap" FontSize="20" Background="White" Margin="-112,-30,-113,124" BorderBrush="Black" BorderThickness="4"/>
+        </Grid>
+        <Grid Width="800" Height="62" Margin="0,820,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Border  BorderThickness="10" CornerRadius="20" Margin="-146,-101,-138,82" BorderBrush="Black" RenderTransformOrigin="0.5,0.5">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.187"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.997"/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Border.Background>
+                    <SolidColorBrush Color="White" Opacity="0.3"/>
+                </Border.Background>
+            </Border>
+            <Button Height="40" Width="100" Margin="-112,-80,812,102" BorderBrush="Black" BorderThickness="" Background="White" Click="Button_Click_1">
+                <TextBlock FontSize="20" FontWeight="Bold">사진 첨부</TextBlock>
             </Button>
-            <TextBlock FontSize="15" Margin="117,465,228,10" Name="text1">경로 여기다</TextBlock>
+            <TextBlock FontSize="20" FontWeight="Bold" Margin="3,-74,44,94" Name="text1">첨부경로</TextBlock>
+            <Border CornerRadius="20" BorderThickness="3" BorderBrush="White" Margin="797,-81,-111,101" Background="#FFC5C6D6">
+                <Button FontWeight="Bold" Foreground="Black">
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                    </Button.BorderBrush>
+                    <Button.Background>
+                        <SolidColorBrush Color="#FFD3C8C8" Opacity="0"/>
+                    </Button.Background>
+                    <TextBlock FontSize="20">게시하기</TextBlock>
+                </Button>
+            </Border>
         </Grid>
-        <Button Width="150" Height="50" Margin="300,840,300,110" Background="#FF8B88C9">
-            <TextBlock FontSize="30" FontWeight="Bold" Foreground="Black">게시하기</TextBlock>
-        </Button>
     </Grid>
 </UserControl>
