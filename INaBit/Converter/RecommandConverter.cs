@@ -26,7 +26,6 @@ namespace INaBit.Converter
             {
                 return new BitmapImage(new Uri("/아이콘/one_heart.png", UriKind.Relative));
             }
-            MessageBox.Show(value.ToString());
             return null;
         }
 

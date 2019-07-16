@@ -63,7 +63,9 @@
             <Grid.Background>
                 <SolidColorBrush Color="#FF002646"/>
             </Grid.Background>
-            <Image Margin="0,-18,0,-28" HorizontalAlignment="Left" Width="247" Source="/디자인/inavitLogo.png" Grid.ColumnSpan="2"/>
+            <Image Margin="0,-18,0,-28" HorizontalAlignment="Left" Width="247" Cursor="Hand"
+                   MouseDown="Image_MouseDown"
+                   Source="/디자인/inavitLogo.png" Grid.ColumnSpan="2"/>
             <TextBlock FontSize="15" Margin="0,25,135,18" Foreground="White" Grid.Column="1" HorizontalAlignment="Right">로그인</TextBlock>
             <TextBlock FontSize="15" Margin="0,25,40,18" Foreground="White" Grid.Column="1" HorizontalAlignment="Right">회원가입</TextBlock>
         </Grid>
