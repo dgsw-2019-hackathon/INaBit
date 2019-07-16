@@ -175,6 +175,9 @@
   <ItemGroup>
     <Resource Include="아이콘\comment.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="디자인\BasePicture.jpeg" />
+  </ItemGroup>
   <PropertyGroup>
     <StartArguments />
   </PropertyGroup>

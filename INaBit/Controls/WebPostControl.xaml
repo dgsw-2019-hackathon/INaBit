@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:INaBit.Controls"
              xmlns:RuntimeBinder="clr-namespace:Microsoft.CSharp.RuntimeBinder;assembly=Microsoft.CSharp" x:Class="INaBit.Controls.WebPostControl"
              mc:Ignorable="d" Height="1500" Width="1000">
-    <Grid Background="#261182">
+    <Grid Background="#FF282859">
         <TextBlock FontSize="20" FontWeight="Bold" Foreground="White" Margin="100,81,792,1387">유용한 웹</TextBlock>
         <Grid Background="#FF998DCD" Width="800" Height="100" HorizontalAlignment="Center" Margin="0,118,0,0" VerticalAlignment="Top">
             <Image Height="100" Source="/Assets/HandLight.png" Margin="0,-2,696,2" RenderTransformOrigin="0.5,0.5">
@@ -22,9 +22,11 @@
             <TextBlock FontSize="40" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Margin="106,26,96,24" TextAlignment="Center">게시글 제목</TextBlock>
             <TextBlock FontSize="15" Margin="628,76,10,0" FontWeight="Bold" TextAlignment="Right">작성자:홍길동</TextBlock>
         </Grid>
-
+        <Image Source="/디자인/BasePicture.jpeg" Margin="100,246,100,858" OpacityMask="#FFFBFBFB"/>
         <Grid Background="#FF998DCD" Width="800" Height="145" Margin="100,642,100,0" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Grid Background="White" Margin="10"></Grid>
+            <Grid Background="White" Margin="10">
+                <TextBlock Margin="10" FontSize="15" FontWeight="Bold">아이디어를 게시판으로 만들어서 공유 할 수 있는 커뮤니티를 만들어 보면 어떨까요?</TextBlock>
+            </Grid>
         </Grid>
         <Grid Background="White" Width="800" Height="500" Margin="0,870,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
 
