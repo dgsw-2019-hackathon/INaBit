@@ -44,7 +44,7 @@ namespace INaBit.ViewModel
             App.NickName = Id;
             MessageBox.Show("로그인에 성공하였습니다.");
             loginDone?.Invoke();
-            MessageBox.Show(Id);
+            
         }
     }
 }

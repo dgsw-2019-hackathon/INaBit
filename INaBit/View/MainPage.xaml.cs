@@ -52,5 +52,10 @@ namespace INaBit
             MainCtrl.Visibility = Visibility.Collapsed;
         }
 
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            PageCtrl.Visibility = Visibility.Collapsed;
+            MainCtrl.Visibility = Visibility.Visible;
+        }
     }
 }

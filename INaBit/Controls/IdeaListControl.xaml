@@ -6,6 +6,24 @@
              xmlns:local="clr-namespace:INaBit.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="Button" x:Key="ButtonStyle">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Transparent"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="3*"/>
@@ -64,7 +82,7 @@
                 </Border.Background>
             </Border>
             <Border CornerRadius="20" BorderThickness="3" BorderBrush="White" Margin="793,-84,-107,104" Background="#FFC5C6D6">
-                <Button FontWeight="Bold" Foreground="Black">
+                <Button FontWeight="Bold" Foreground="Black" Style="{StaticResource ButtonStyle}">
                     <Button.BorderBrush>
                         <SolidColorBrush Color="#FF707070" Opacity="0"/>
                     </Button.BorderBrush>
