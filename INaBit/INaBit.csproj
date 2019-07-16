@@ -200,6 +200,9 @@
     <Resource Include="아이콘\icon_write.png" />
     <Resource Include="아이콘\search_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fonts\" />
+  </ItemGroup>
   <PropertyGroup>
     <StartArguments />
   </PropertyGroup>
