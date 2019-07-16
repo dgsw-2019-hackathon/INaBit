@@ -5,29 +5,34 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:INaBit.Controls.Posts"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    
+             d:DesignHeight="450" d:DesignWidth="1000">
+
     <Grid Height="150" Cursor="Hand" MouseDown="Grid_MouseDown">
 
-        <Grid Background="White" MinWidth="800"
-              Margin="50,30,0,30">
-            <TextBlock Text="{Binding Path=Title}" 
+        <Grid  MinWidth="800"
+              Margin="36,23,0,23" >
+            <Border BorderThickness="10" CornerRadius="10" Background="White">
+                <Border.BorderBrush>
+                    <SolidColorBrush Color="Black" Opacity="0.3"/>
+                </Border.BorderBrush>
+                <StackPanel Margin="18,12,0,16">
+                    <TextBlock FontSize="20" FontWeight="Bold" Text="{Binding Path=Title}" 
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left"/>
-            <TextBlock HorizontalAlignment="Right"
-                       VerticalAlignment="Center">
-                <Run Text="작성자 : "/>
-                <Run Text="{Binding Path=Writer}"/>
-            </TextBlock>
+                    <TextBlock HorizontalAlignment="Right"
+                       VerticalAlignment="Center" Margin="0,0,10,0"><Run Text="작성자 : "/><Run Text=" "/><Run Text="{Binding Writer}"/></TextBlock>
+                </StackPanel>
+
+            </Border>
         </Grid>
 
 
         <StackPanel Orientation="Horizontal">
             <Image Source="/Assets/Medal.png" Width="70" Height="70"
                      VerticalAlignment="Top"/>
-            <TextBlock Foreground="White" >
-                                <Run Text="{Binding Path=Category}"/>
-                                <Run Text="카테고리"/>
+            <TextBlock Foreground="White">
+            <Run FontSize="15" FontWeight="Bold" Text="{Binding Path=Category}"/>
+            <Run FontSize="15" FontWeight="Bold" Text="카테고리"/>
             </TextBlock>
         </StackPanel>
 

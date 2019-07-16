@@ -244,6 +244,12 @@
     <Resource Include="아이콘\three_heart.png" />
     <Resource Include="아이콘\two_heart.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="디자인\BackGroundImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="디자인\inavitLogo.png" />
+  </ItemGroup>
   <PropertyGroup>
     <StartArguments />
   </PropertyGroup>

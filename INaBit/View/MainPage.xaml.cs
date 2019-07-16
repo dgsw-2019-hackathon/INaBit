@@ -51,5 +51,6 @@ namespace INaBit
             PageCtrl.Visibility = Visibility.Visible;
             MainCtrl.Visibility = Visibility.Collapsed;
         }
+
     }
 }
