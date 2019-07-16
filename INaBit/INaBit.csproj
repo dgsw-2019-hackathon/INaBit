@@ -76,6 +76,14 @@
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="Controls\AppPostWriteControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\IdeaPostWriteControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\LoginControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -96,6 +104,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\WebPostWriteControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -103,6 +115,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\AppPostWriteControl.xaml.cs">
+      <DependentUpon>AppPostWriteControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IdeaPostWriteControl.xaml.cs">
+      <DependentUpon>IdeaPostWriteControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\LoginControl.xaml.cs">
       <DependentUpon>LoginControl.xaml</DependentUpon>
@@ -118,6 +136,9 @@
     </Compile>
     <Compile Include="Controls\WebPostControl.xaml.cs">
       <DependentUpon>WebPostControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WebPostWriteControl.xaml.cs">
+      <DependentUpon>WebPostWriteControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Posts\PostModel.cs" />
     <Compile Include="ViewModel\LoginControlViewModel.cs" />
