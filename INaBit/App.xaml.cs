@@ -7,6 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Navigation;
 
 namespace INaBit
@@ -16,6 +17,9 @@ namespace INaBit
     /// </summary>
     public partial class App : Application
     {
+        public delegate void SetView(UserControl control);
+        public static SetView setView;
+
         public static PostsViewModel postsViewModel = new PostsViewModel();
         public static LoginControlViewModel loginViewModel = new LoginControlViewModel();
     }

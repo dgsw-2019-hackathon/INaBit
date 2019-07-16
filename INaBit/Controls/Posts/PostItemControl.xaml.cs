@@ -21,7 +21,8 @@ namespace INaBit.Controls.Posts
     /// </summary>
     public partial class PostItemControl : UserControl
     {
-        PostItemViewModel viewModel;
+        public PostItemViewModel viewModel;
+        public UserControl control;
         public PostItemControl()
         {
             InitializeComponent();
@@ -34,6 +35,11 @@ namespace INaBit.Controls.Posts
             viewModel.Category = Category;
             viewModel.Title = Title;
             viewModel.Writer = Writer;
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            App.setView?.Invoke(control);
         }
     }
 }

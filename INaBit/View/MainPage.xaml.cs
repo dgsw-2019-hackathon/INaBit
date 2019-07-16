@@ -29,12 +29,25 @@ namespace INaBit
         private void InitViewControl()
         {
             App.loginViewModel.loginDone += LoginDone;
+            App.setView += PageView;
         }
 
         public void LoginDone()
         {
             LoginCtrl.Visibility = Visibility.Collapsed;
             MainCtrl.Visibility = Visibility.Visible;
+        }
+        public void SetViewMain()
+        {
+            Ctrl.Visibility = Visibility.Collapsed;
+            MainCtrl.Visibility = Visibility.Visible;
+        }
+
+        public void PageView(UserControl control)
+        {
+            Ctrl = control;
+            Ctrl.Visibility = Visibility.Visible;
+            MainCtrl.Visibility = Visibility.Collapsed;
         }
     }
 }
