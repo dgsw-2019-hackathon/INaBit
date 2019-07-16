@@ -142,6 +142,7 @@
     </Compile>
     <Compile Include="Model\Posts\PostModel.cs" />
     <Compile Include="ViewModel\LoginControlViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\Posts\PostItemViewModel.cs" />
     <Compile Include="ViewModel\Posts\PostsViewModel.cs" />
     <Compile Include="View\MainPage.xaml.cs">
@@ -167,6 +168,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Fonts\NanumBarunGothic.ttf" />
+    <Resource Include="Fonts\NanumBarunGothicBold.ttf" />
+    <Resource Include="Fonts\NanumBarunGothicLight.ttf" />
+    <Resource Include="Fonts\NanumBarunGothicUltraLight.ttf" />
     <None Include="INaBit_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -200,8 +205,9 @@
     <Resource Include="아이콘\icon_write.png" />
     <Resource Include="아이콘\search_icon.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Fonts\" />
+    <Resource Include="Fonts\font.txt" />
   </ItemGroup>
   <PropertyGroup>
     <StartArguments />

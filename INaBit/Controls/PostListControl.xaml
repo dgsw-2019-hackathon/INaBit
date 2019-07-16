@@ -8,10 +8,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
-        <Style TargetType="ListViewItem">
+        <Style x:Key="ListViewItem" TargetType="ListViewItem">
             <Setter Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
+                    <ControlTemplate TargetType="{x:Type  ListViewItem}">
                         <Border Background="{TemplateBinding Background}">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
@@ -29,9 +29,10 @@
     <Grid>
 
         <ListView ItemsSource="{Binding Items}" 
-                  
+                  ItemContainerStyle="{StaticResource ListViewItem}"
                   Background="Transparent"
                   BorderBrush="Transparent">
+            
         </ListView>
         
         
