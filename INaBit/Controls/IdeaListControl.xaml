@@ -25,10 +25,6 @@
         </Style>
     </UserControl.Resources>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="3*"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
         <Grid Width="800" Height="100" HorizontalAlignment="Center" Margin="0,118,0,0" VerticalAlignment="Top">
             <Border  BorderThickness="10" CornerRadius="10" Background="White" Margin="-230,-76,-209,76">
                 <Border.BorderBrush>
@@ -48,7 +44,7 @@
             <TextBlock FontSize="40" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Margin="0,-50,0,100" TextAlignment="Center" Text="아이디어 공유"/>
         </Grid>
 
-        <Grid Width="800" Height="500" Margin="0,290,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2">
+        <Grid Width="800" Height="500" Margin="0,290,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Border  BorderThickness="10" CornerRadius="20" Margin="-146,-117,-138,98" BorderBrush="Black" RenderTransformOrigin="0.5,0.5">
                 <Border.RenderTransform>
                     <TransformGroup>
@@ -67,7 +63,7 @@
 
             </ListView>
         </Grid>
-        <Grid Width="800" Height="62" Margin="0,70,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="1">
+        <Grid Width="800" Height="62" Margin="0,820,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Border  BorderThickness="10" CornerRadius="20" Margin="-146,-101,-138,82" BorderBrush="Black" RenderTransformOrigin="0.5,0.5">
                 <Border.RenderTransform>
                     <TransformGroup>
