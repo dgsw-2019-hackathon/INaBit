@@ -31,7 +31,7 @@ namespace INaBit.ViewModel.Posts
             set => SetProperty(ref _idx, value);
         }
 
-        private int _recommand;
+        private int _recommand = 0;
         public int Recommand
         {
             get => _recommand;
@@ -54,8 +54,12 @@ namespace INaBit.ViewModel.Posts
 
         private void OnRecommand()
         {
-            MessageBox.Show("asd");
+            MessageBox.Show("추천하셨습니다.");
             Recommand++;
+            MessageBox.Show(StaticVar.s);
+            App.SortAppList();
+            App.SortWebList();
+            App.SortIdeaList();
         }
     }
 }
