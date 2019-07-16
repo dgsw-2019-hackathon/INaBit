@@ -9,26 +9,13 @@
     <Grid>
 
         <ListView ItemsSource="{Binding Items}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Assets/Medal.png" Width="70" Height="70"
-                                   VerticalAlignment="Top"/>
-                            <TextBlock Foreground="White" >
-                                <Run Text="{Binding Path=Category}"/>
-                                <Run Text="카테고리"/>
-                            </TextBlock>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn>
 
-                            <StackPanel Orientation="Horizontal" Margin="-80,30,0,0">
-                                <TextBlock Text="{Binding Path=a}"/>
-                                <TextBlock Text="{Binding Path=a}"/>
-                            </StackPanel>
-
-                        </StackPanel>
-                    </Grid>
-                </DataTemplate>
-            </ListView.ItemTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
         </ListView>
         
         
