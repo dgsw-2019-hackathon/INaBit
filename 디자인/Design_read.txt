@@ -1,1 +1,4 @@
-
+screen_close , open ( 각각 메인 아이콘 클릭시 여닫히는 메뉴 디자인 )
+screen2 ( 글 상세보기 디자인 )
+screen32 ( 댓글 확인 디자인 )
+screen_list ( 글 목록 디자인 )
