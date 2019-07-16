@@ -7,11 +7,16 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Height="150">
-        <StackPanel Orientation="Horizontal" Background="White"
-                    Margin="50,30,0,30">
-            <TextBlock Text="{Binding Path=a}"/>
-            <TextBlock Text="{Binding Path=a}" HorizontalAlignment="Right"/>
-        </StackPanel>
+
+        <Grid Background="White" MinWidth="800"
+              Margin="50,30,0,30">
+            <TextBlock Text="{Binding Path=Title}" 
+                       HorizontalAlignment="Left"/>
+            <TextBlock HorizontalAlignment="Right">
+                <Run Text="작성자 : "/>
+                <Run Text="{Binding Path=Writer}"/>
+            </TextBlock>
+        </Grid>
 
 
         <StackPanel Orientation="Horizontal">

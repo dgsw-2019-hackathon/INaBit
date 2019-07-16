@@ -24,6 +24,10 @@ namespace INaBit.ViewModel.Posts
             Items.Add(new PostItemControl());
             Items.Add(new PostItemControl());
             Items.Add(new PostItemControl());
+            foreach(var a in Items)
+            {
+                a.SetPost("asdㅁㄴㅇㅁㄴㅇㄴㅁㅇㅁㄴㅇㅁㄴ", "DGSW1", "카테고리");
+            }
         }
 
     }

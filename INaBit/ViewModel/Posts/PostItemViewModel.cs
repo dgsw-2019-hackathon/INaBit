@@ -9,23 +9,27 @@ using System.Windows.Controls;
 
 namespace INaBit.ViewModel.Posts
 {
-    class PostListItem : ListViewItem , INotifyPropertyChanged
+    public class PostItemViewModel : BindableBase
     {
         private string _category;
         public string Category
         {
             get => _category;
-            set
-            {
-                _category = value;
-                NotifyProeprtyChanged(nameof(Category));
-            }
+            set => SetProperty(ref _category, value);
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        void NotifyProeprtyChanged(string propertyName)
+        private string _writer;
+        public string Writer
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            get => _writer;
+            set => SetProperty(ref _writer, value);
+        }
+
+        private string _title;
+        public string Title
+        {
+            get => _title;
+            set => SetProperty(ref _title, value);
         }
     }
 }
