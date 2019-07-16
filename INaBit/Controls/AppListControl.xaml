@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:INaBit.Controls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="1000" d:DesignWidth="800">
     <Grid Background="#FF282859">
         <Grid Background="#FF706DBD" Width="800" Height="100" HorizontalAlignment="Center" Margin="0,118,0,0" VerticalAlignment="Top">
             <Image Height="100" Source="/Assets/HandLight.png" Margin="0,-2,696,2" RenderTransformOrigin="0.5,0.5">
