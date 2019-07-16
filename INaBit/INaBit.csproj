@@ -113,6 +113,8 @@
       <DependentUpon>PostItemControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Posts\PostModel.cs" />
+    <Compile Include="ViewModel\Posts\PostItemViewModel.cs" />
+    <Compile Include="ViewModel\Posts\PostsViewModel.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
       <SubType>Code</SubType>
