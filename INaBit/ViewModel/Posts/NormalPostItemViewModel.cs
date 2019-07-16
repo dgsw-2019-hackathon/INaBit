@@ -38,6 +38,13 @@ namespace INaBit.ViewModel.Posts
             set => SetProperty(ref _recommand, value);
         }
 
+        private string _content;
+        public string Content
+        {
+            get => _content;
+            set => SetProperty(ref _content, value);
+        }
+
         public ICommand OnRecommandCommand { get; set; }
 
         public NormalPostItemViewModel()

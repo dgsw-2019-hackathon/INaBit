@@ -30,5 +30,10 @@ namespace INaBit.Controls
             }
             this.DataContext = App.WebListViewModel;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            App.setView(new WebPostWriteControl());
+        }
     }
 }
