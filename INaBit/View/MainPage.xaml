@@ -50,59 +50,70 @@
 
     </Page.Resources>
 
-    <Grid Background="#ff282859">
-        <ScrollViewer x:Name="MainCtrl" Background="#ff282859"
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="Black">
+            
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid Background="#ff282859">
+                <ScrollViewer x:Name="MainCtrl" Background="#ff282859"
                       Visibility="Visible">
-            <StackPanel HorizontalAlignment="Center"
+                    <StackPanel HorizontalAlignment="Center"
                         VerticalAlignment="Center">
-                <Grid Margin="0,0,0,-80" Width="600" Height="50">
-                    
-                    <TextBox Template="{StaticResource TextBoxBaseControlTemplate}"
+                        <Grid Margin="0,0,0,-80" Width="600" Height="50">
+
+                            <TextBox Template="{StaticResource TextBoxBaseControlTemplate}"
                              Width="560" Height="50" FontSize="24"
                              VerticalContentAlignment="Center"
                              BorderBrush="Transparent"/>
 
-                    <Image Height="50" Source="/아이콘/search_icon.png"
+                            <Image Height="50" Source="/아이콘/search_icon.png"
                            HorizontalAlignment="Right"
                            Margin="0,0,30,0"
                            Cursor="Hand"/>
-                </Grid>
-                <Grid Height="250" VerticalAlignment="top"
+                        </Grid>
+                        <Grid Height="250" VerticalAlignment="top"
                           Margin="0,50,0,0">
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="250"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="250"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
 
 
-                    <Border Background="White" CornerRadius="30"
+                            <Border Background="White" CornerRadius="30"
                             Grid.ColumnSpan="2" Margin="0,0,0,50"
                             Height="80" Width="700">
-                        <StackPanel Orientation="Horizontal">
-                            <Button Content="아이디어" Command="{Binding IdeaPageCommand}" Style="{StaticResource ButtonStyle}"/>
-                            <Button Content="유용한 웹" Command="{Binding WebPageCommand}" Style="{StaticResource ButtonStyle}"/>
-                            <Button Content="유용한 앱" Command="{Binding AppPageCommand}" Style="{StaticResource ButtonStyle}"/>
-                        </StackPanel>
-                    </Border>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Content="아이디어" Command="{Binding IdeaPageCommand}" Style="{StaticResource ButtonStyle}"/>
+                                    <Button Content="유용한 웹" Command="{Binding WebPageCommand}" Style="{StaticResource ButtonStyle}"/>
+                                    <Button Content="유용한 앱" Command="{Binding AppPageCommand}" Style="{StaticResource ButtonStyle}"/>
+                                </StackPanel>
+                            </Border>
 
-                    <Image Grid.Column="0" Source="/Assets/HandLight.png"/>
+                            <Image Grid.Column="0" Source="/Assets/HandLight.png"/>
 
-                    <TextBlock Grid.Column="1" VerticalAlignment="Bottom" Margin="0,0,0,20" FontSize="40">
+                            <TextBlock Grid.Column="1" VerticalAlignment="Bottom" Margin="0,0,0,20" FontSize="40">
                             <Run Text="빛나는 아이디어가 탄생하다," Foreground="White"/>
                             <Run Text="아이나빛" Foreground="White" FontWeight="Bold"/>
-                    </TextBlock>
-                </Grid>
-                <ctrl:PostListControl VerticalAlignment="Bottom"/>
-            </StackPanel>
-        </ScrollViewer>
-        <ScrollViewer x:Name="LoginCtrl" Visibility="Collapsed">
-            <ctrl:LoginControl/>
-        </ScrollViewer>
-        <ScrollViewer x:Name="PageCtrl" Visibility="Collapsed">
-            <Grid x:Name="PageGrid">
-                
+                            </TextBlock>
+                        </Grid>
+                        <ctrl:PostListControl VerticalAlignment="Bottom"/>
+                    </StackPanel>
+                </ScrollViewer>
+                <ScrollViewer x:Name="LoginCtrl" Visibility="Collapsed">
+                    <ctrl:LoginControl/>
+                </ScrollViewer>
+                <ScrollViewer x:Name="PageCtrl" Visibility="Collapsed">
+                    <Grid x:Name="PageGrid">
+
+                    </Grid>
+                </ScrollViewer>
             </Grid>
-        </ScrollViewer>
+        </Grid>
     </Grid>
 </Page>
