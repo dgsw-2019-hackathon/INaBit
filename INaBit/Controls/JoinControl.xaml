@@ -5,35 +5,62 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:INaBit.Controls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#261182" Margin="0,0,-70,-1088">
-        <Grid HorizontalAlignment="Center" Width="425" Background="White" Margin="219,274,226,0" Height="373" VerticalAlignment="Top">
-           
-            <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0" Background="#FF292959">
-                <TextBlock Margin="10,19,132,-19" FontSize="40" FontFamily="Segoe UI Black" Text="회원가입" Foreground="White" />
-            </Grid>
-            <Grid Grid.Row="1">
-                <TextBlock FontSize="20" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" Background="White" Margin="58,18,301,225" Text="Name"/>
-                <TextBox FontSize="20" Height="30" Width="200" Background="Gray" Margin="124,18,101,225" CaretBrush="Black"/>
+             d:DesignHeight="1000" d:DesignWidth="800">
+    <Grid>
+        <Grid Width="800" Height="100" HorizontalAlignment="Center" Margin="0,118,0,0" VerticalAlignment="Top">
+            <Border  BorderThickness="10" CornerRadius="10" Background="White" Margin="56,450,424,-446">
+                <Border.BorderBrush>
+                    <SolidColorBrush Color="Black"/>
+                </Border.BorderBrush>
+                <TextBlock FontSize="40" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Margin="43,22,64,0" TextAlignment="Center" Text="회원가입"/>
+            </Border>
+        </Grid>
 
-                <TextBlock FontSize="20" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" Background="White" Margin="74,116,316,127" Text="ID"/>
-                <TextBox FontSize="20" Height="30" Width="200" Background="Gray" Margin="124,116,101,127" CaretBrush="Black"/>
+        <Grid Width="800" Height="500" Margin="0,290,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Border  BorderThickness="10" CornerRadius="20" Margin="6,364,14,-208" BorderBrush="Black" RenderTransformOrigin="0.5,0.5">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.187"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.997"/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Border.Background>
+                    <SolidColorBrush Color="White" Opacity="0.3"/>
+                </Border.Background>
+            </Border>
 
-                <TextBlock FontSize="20" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" Background="White" Margin="74,165,316,78" Text="PW"/>
-                <TextBox FontSize="20" Height="30" Width="200" Background="Gray" Margin="124,165,101,78" CaretBrush="Black"/>
+            <TextBlock FontSize="30" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" Margin="172,410,541,60">
+                <TextBlock.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </TextBlock.Background><Run Text="Name"/></TextBlock>
+            <TextBox FontSize="30" Height="30" Background="White" Margin="264,410,239,60" CaretBrush="Black" BorderBrush="Black" BorderThickness="3"/>
 
-                <TextBlock FontSize="20" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" Background="White" Margin="58,67,301,176" Text="Email"/>
-                <TextBox FontSize="20" Height="30" Width="200" Background="Gray" Margin="124,67,101,176" CaretBrush="Black"/>
+            <TextBlock FontSize="30" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" Margin="172,466,541,4">
+                <TextBlock.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </TextBlock.Background><Run Text="Email"/></TextBlock>
+            <TextBox FontSize="30" Height="30" Background="White" Margin="264,466,239,4" CaretBrush="Black"  BorderBrush="Black" BorderThickness="3"/>
 
-                <Button Width="150" Height="30" Margin="137,224,138,19" Background="#FF404BB4" Foreground="Black" FontWeight="Bold">
-                   
-                    <TextBlock FontSize="20" Foreground="White" Text="join"/>
-                </Button>
-            </Grid>
+            <TextBlock FontSize="30" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" Margin="204,524,559,-54">
+                <TextBlock.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </TextBlock.Background>ID</TextBlock>
+            <TextBox FontSize="30" Height="30" Background="White" Margin="264,524,239,-54" CaretBrush="Black"  BorderBrush="Black" BorderThickness="3"/>
+
+            <TextBlock FontSize="30" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" Margin="204,582,541,-110">
+                <TextBlock.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </TextBlock.Background>PW</TextBlock>
+            <PasswordBox FontSize="30" Height="30" Background="White" Margin="264,582,239,-112" CaretBrush="Black"  BorderBrush="Black" BorderThickness="3"/>
+
+            <Button Margin="303,630,336,-176" Background="#FF33386A" Foreground="Black" FontWeight="Bold">
+
+                <TextBlock FontSize="20" Foreground="White">
+                    Join
+                </TextBlock>
+            </Button>
         </Grid>
     </Grid>
 </UserControl>
