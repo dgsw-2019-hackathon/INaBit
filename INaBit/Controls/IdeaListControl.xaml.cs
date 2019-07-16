@@ -26,5 +26,7 @@ namespace INaBit.Controls
             InitializeComponent();
             this.DataContext = App.IdeaListViewModel;
         }
+
+        
     }
 }

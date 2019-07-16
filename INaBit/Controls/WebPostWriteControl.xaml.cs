@@ -30,7 +30,8 @@ namespace INaBit.Controls
         {
             NormalPostItemControl newItem = new NormalPostItemControl();
             newItem.viewModel.Title = "Title";
-            newItem.viewModel.Writer = App.NickName;
+            newItem.viewModel.Writer = "DGSW1";
+            newItem.control = this;
             App.WebListViewModel.Items.Add(newItem);
         }
     }

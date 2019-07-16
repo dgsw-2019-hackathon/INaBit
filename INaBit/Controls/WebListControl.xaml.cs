@@ -1,4 +1,5 @@
-﻿using System;
+﻿using INaBit.Controls.Posts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,11 @@ namespace INaBit.Controls
         public WebListControl()
         {
             InitializeComponent();
-            
+            if(App.WebListViewModel == null)
+            {
+                App.WebListViewModel = new ViewModel.Posts.NormalPostViewModel();
+            }
+            this.DataContext = App.WebListViewModel;
         }
     }
 }

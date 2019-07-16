@@ -63,7 +63,7 @@
             </Button>
             <TextBlock FontSize="20" FontWeight="Bold" Margin="3,-74,44,94" Name="text1">첨부경로</TextBlock>
             <Border CornerRadius="20" BorderThickness="3" BorderBrush="White" Margin="797,-81,-111,101" Background="#FFC5C6D6">
-                <Button FontWeight="Bold" Foreground="Black">
+                <Button FontWeight="Bold" Foreground="Black" Click="Button_Click">
                     <Button.BorderBrush>
                         <SolidColorBrush Color="#FF707070" Opacity="0"/>
                     </Button.BorderBrush>

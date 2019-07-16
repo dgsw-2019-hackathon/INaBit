@@ -39,6 +39,7 @@ namespace INaBit
             LoginCtrl.Visibility = Visibility.Collapsed;
             MainCtrl.Visibility = Visibility.Visible;
         }
+
         public void SetViewMain()
         {
             PageCtrl.Visibility = Visibility.Collapsed;
@@ -56,6 +57,7 @@ namespace INaBit
         {
             PageCtrl.Visibility = Visibility.Collapsed;
             MainCtrl.Visibility = Visibility.Visible;
+            PageGrid.Children.Clear();
         }
 
         private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using INaBit.Controls.Posts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,8 @@ namespace INaBit.Controls
             InitializeComponent();
         }
 
+        
+
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
@@ -40,6 +43,16 @@ namespace INaBit.Controls
                 this.filename = dlg.FileName;
                 text1.Text = filename;
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NormalPostItemControl newItem = new NormalPostItemControl();
+            newItem.viewModel.Title = "";
+            newItem.viewModel.Writer = "";
+            newItem.viewModel.Recommand = 0;
+            newItem.control = this;
+            App.IdeaListViewModel.Items.Add(newItem);
         }
     }
 }

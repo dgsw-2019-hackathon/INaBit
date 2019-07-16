@@ -82,9 +82,13 @@
                 </Border.Background>
             </Border>
             <Image Source="/Assets/like.png" Margin="575,-101,37,85"/>
-            <TextBlock FontSize="30" FontWeight="Bold" Margin="700,-83,25,104">0개</TextBlock>
+            <TextBlock FontSize="30" FontWeight="Bold" Margin="700,-83,25,104">
+                <Run Text="{Binding Path=Recommand}"/>
+                <Run Text="개"/>
+            </TextBlock>
             <Border CornerRadius="20" BorderThickness="3" BorderBrush="White" Margin="793,-84,-107,104" Background="#FFC5C6D6">
-                <Button FontWeight="Bold" Foreground="Black" Style="{StaticResource ButtonStyle}">
+                <Button FontWeight="Bold" Foreground="Black" Style="{StaticResource ButtonStyle}"
+                        Cursor="Hand" Command="{Binding OnRecommandCommand}">
                     <Button.BorderBrush>
                         <SolidColorBrush Color="#FF707070" Opacity="0"/>
                     </Button.BorderBrush>

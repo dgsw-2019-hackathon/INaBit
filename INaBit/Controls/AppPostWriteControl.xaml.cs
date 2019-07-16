@@ -1,4 +1,5 @@
-﻿using System;
+﻿using INaBit.Controls.Posts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -40,6 +41,16 @@ namespace INaBit.Controls
                 this.filename = dlg.FileName;
                 text1.Text = filename;
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NormalPostItemControl newItem = new NormalPostItemControl();
+            newItem.control = this;
+            newItem.viewModel.Title = "";
+            newItem.viewModel.Writer = "";
+            newItem.viewModel.Recommand = 0;
+            App.AppListViewModel.Items.Add(newItem);
         }
     }
 }
