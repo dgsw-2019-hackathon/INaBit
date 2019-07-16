@@ -19,6 +19,12 @@ namespace INaBit.ViewModel
 
         public ICommand LoginCommand { get; set; }
 
+        private string _id;
+        public string Id
+        {
+            get => _id;
+            set => SetProperty(ref _id, value);
+        }
 
         private string _pwd;
         public string Pwd
@@ -35,9 +41,10 @@ namespace INaBit.ViewModel
 
         private void OnLogin()
         {
-            
+            App.NickName = Id;
             MessageBox.Show("로그인에 성공하였습니다.");
             loginDone?.Invoke();
+            MessageBox.Show(Id);
         }
     }
 }

@@ -27,5 +27,12 @@ namespace INaBit.ViewModel.Posts
             get => _idx;
             set => SetProperty(ref _idx, value);
         }
+
+        private int _recommand;
+        public int Recommand
+        {
+            get => _recommand;
+            set => SetProperty(ref _recommand, value);
+        }
     }
 }

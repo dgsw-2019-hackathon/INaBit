@@ -1,4 +1,5 @@
-﻿using System;
+﻿using INaBit.Controls.Posts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,5 +25,14 @@ namespace INaBit.Controls
         {
             InitializeComponent();
         }
+
+        void OnPostingClicked()
+        {
+            NormalPostItemControl newItem = new NormalPostItemControl();
+            newItem.viewModel.Title = "Title";
+            newItem.viewModel.Writer = App.NickName;
+            App.WebListViewModel.Items.Add(newItem);
+        }
     }
 }
+

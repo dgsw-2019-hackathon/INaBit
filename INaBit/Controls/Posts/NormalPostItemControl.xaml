@@ -21,6 +21,7 @@
                    TextAlignment="Center"
                    Text="{Binding Path=Title}"/>
         <TextBlock Grid.Column="2"
+                   TextAlignment="Center"
                    Text="{Binding Path=Writer}"/>
     </Grid>
 </UserControl>

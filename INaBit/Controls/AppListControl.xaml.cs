@@ -23,26 +23,41 @@ namespace INaBit.Controls
         public AppListControl()
         {
             InitializeComponent();
-            if(App.normalPost == null)
+            if(App.AppListViewModel == null)
             {
-                App.normalPost = new ViewModel.Posts.NormalPostViewModel();
-                if (App.normalPost == null)
+                App.AppListViewModel = new ViewModel.Posts.NormalPostViewModel();
+                if (App.AppListViewModel == null)
                 {
                     MessageBox.Show("널");
                 }
                 else
                 {
-                    App.normalPost.Items.Add(new Posts.NormalPostItemControl());
-                    App.normalPost.Items.Add(new Posts.NormalPostItemControl());
-                    App.normalPost.Items.Add(new Posts.NormalPostItemControl());
-                    App.normalPost.Items.Add(new Posts.NormalPostItemControl());
-                    App.normalPost.Items[0].viewModel.Idx = 1;
-                    App.normalPost.Items[0].viewModel.Title = "MFC 정말 훌륭한 라이브러리에요^^";
-                    App.normalPost.Items[1].viewModel.Idx = 2;
-                    App.normalPost.Items[2].viewModel.Idx = 3;
+                    App.AppListViewModel.Items.Add(new Posts.NormalPostItemControl());
+                    App.AppListViewModel.Items.Add(new Posts.NormalPostItemControl());
+                    App.AppListViewModel.Items.Add(new Posts.NormalPostItemControl());
+                    App.AppListViewModel.Items.Add(new Posts.NormalPostItemControl());
+                    App.AppListViewModel.Items[0].viewModel.Recommand = 200;
+                    App.AppListViewModel.Items[0].viewModel.Title = "MFC 정말 훌륭한 라이브러리에요^^";
+                    App.AppListViewModel.Items[0].viewModel.Writer = "hbmin3789";
+                    App.AppListViewModel.Items[1].viewModel.Title = "MFC 같은 쓰레기와는 차원이 다른 라이브러리입니다.";
+                    App.AppListViewModel.Items[1].viewModel.Writer = "hbmin3789";
+                    App.AppListViewModel.Items[1].viewModel.Recommand = 500;
+                    App.AppListViewModel.Items[2].viewModel.Recommand = 700;
+                    App.AppListViewModel.Items[2].viewModel.Title = "공유 api입니다.";
+                    App.AppListViewModel.Items[2].viewModel.Writer = "aquayo";
+                    App.AppListViewModel.Items[2].viewModel.Recommand = 700;
+                    App.AppListViewModel.Items[3].viewModel.Title = "나니 라이브러리입니다^^";
+                    App.AppListViewModel.Items[3].viewModel.Writer = "goarosa";
+                    App.AppListViewModel.Items =
+                        new System.Collections.ObjectModel.ObservableCollection<Posts.NormalPostItemControl>(
+                            App.AppListViewModel.Items.OrderByDescending(x => x.viewModel.Recommand));
+                    for(int i=0;i< App.AppListViewModel.Items.Count; i++)
+                    {
+                        App.AppListViewModel.Items[i].viewModel.Idx = (i+1);
+                    }
                 }
             }
-            this.DataContext = App.normalPost;
+            this.DataContext = App.AppListViewModel;
         }
     }
 }

@@ -16,7 +16,9 @@ namespace INaBit.ViewModel.Posts
         {
             get => _items;
             set => SetProperty(ref _items, value);
+            
         }
+
 
         public NormalPostViewModel()
         {

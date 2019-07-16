@@ -19,7 +19,8 @@
             <Grid Grid.Row="1">
                 
                 <TextBlock FontSize="20" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" Background="White" Margin="74,23,319,135">ID</TextBlock>
-                <TextBox FontSize="20" Height="30" Width="200" Background="Gray" Margin="124,23,101,134" CaretBrush="Black"/>
+                <TextBox FontSize="20" Height="30" Width="200" Background="Gray" Margin="124,23,101,134" CaretBrush="Black"
+                         Text="{Binding Id}"/>
                 
                 <TextBlock FontSize="20" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" Background="White" Margin="74,71,316,91">PW</TextBlock>
                 <PasswordBox Height="30" Width="200" Background="Gray" Margin="124,66,101,91" CaretBrush="Black"/>
