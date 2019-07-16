@@ -98,5 +98,8 @@
         <ScrollViewer x:Name="LoginCtrl" Visibility="Collapsed">
             <ctrl:LoginControl/>
         </ScrollViewer>
+        <ScrollViewer x:Name="PageCtrl" Visibility="Collapsed">
+            <UserControl x:Name="Ctrl"/>
+        </ScrollViewer>
     </Grid>
 </Page>

@@ -1,4 +1,5 @@
-﻿using INaBit.Controls.Posts;
+﻿using INaBit.Controls;
+using INaBit.Controls.Posts;
 using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
@@ -24,10 +25,18 @@ namespace INaBit.ViewModel.Posts
             Items.Add(new PostItemControl());
             Items.Add(new PostItemControl());
             Items.Add(new PostItemControl());
-            foreach(var a in Items)
+            Items[0].viewModel.Category = "아이디어";
+            Items[1].viewModel.Category = "유용한 앱";
+            Items[2].viewModel.Category = "유용한 웹";
+            Items[0].viewModel.Title = "좋은 아이디어 공유합니다.";
+            Items[1].viewModel.Title = "이 앱 유용하네요. 추천합니다.";
+            Items[2].viewModel.Title = "웹 추천합니다.";
+            Items[0].control = new WebPostControl();
+            for(int i = 0; i < Items.Count; i++)
             {
-                a.SetPost("asdㅁㄴㅇㅁㄴㅇㄴㅁㅇㅁㄴㅇㅁㄴ", "DGSW1", "카테고리");
+                Items[i].viewModel.Writer = "DGSW" + (i+1).ToString();
             }
+
         }
 
     }
