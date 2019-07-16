@@ -23,11 +23,11 @@
             <TextBlock FontSize="15" Margin="628,76,10,0" FontWeight="Bold" TextAlignment="Right">작성자:홍길동</TextBlock>
         </Grid>
 
-        <Grid Background="White" Width="800" Height="500" Margin="0,290,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
-           
+        <Grid Background="#FF998DCD" Width="800" Height="145" Margin="100,642,100,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Grid Background="White" Margin="10"></Grid>
         </Grid>
         <Grid Background="White" Width="800" Height="500" Margin="0,870,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
-            
+
         </Grid>
     </Grid>
 </UserControl>
