@@ -7,19 +7,22 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Height="150">
+        <StackPanel Orientation="Horizontal" Background="White"
+                    Margin="50,30,0,30">
+            <TextBlock Text="{Binding Path=a}"/>
+            <TextBlock Text="{Binding Path=a}" HorizontalAlignment="Right"/>
+        </StackPanel>
+
+
         <StackPanel Orientation="Horizontal">
             <Image Source="/Assets/Medal.png" Width="70" Height="70"
-                                   VerticalAlignment="Top"/>
+                     VerticalAlignment="Top"/>
             <TextBlock Foreground="White" >
                                 <Run Text="{Binding Path=Category}"/>
                                 <Run Text="카테고리"/>
             </TextBlock>
-
-            <StackPanel Orientation="Horizontal" Margin="-80,30,0,0">
-                <TextBlock Text="{Binding Path=a}"/>
-                <TextBlock Text="{Binding Path=a}"/>
-            </StackPanel>
-
         </StackPanel>
+
+
     </Grid>
 </UserControl>

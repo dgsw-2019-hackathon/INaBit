@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace INaBit.ViewModel.Posts
 {
-    class PostsViewModel : BindableBase
+    public class PostsViewModel : BindableBase
     {
         private ObservableCollection<PostItemControl> _items;
         public ObservableCollection<PostItemControl> Items
@@ -21,6 +21,8 @@ namespace INaBit.ViewModel.Posts
         public PostsViewModel()
         {
             Items = new ObservableCollection<PostItemControl>();
+            Items.Add(new PostItemControl());
+            Items.Add(new PostItemControl());
             Items.Add(new PostItemControl());
         }
 
