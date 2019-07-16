@@ -10,12 +10,20 @@
       Title="Page1">
     <Page.Resources>
         <Style x:Key="CustListViewStyle" TargetType="ListView">
-            <Setter Property="Background" Value="#261182"/>
+            <Setter Property="Background" Value="#ff282859"/>
         </Style>
+        <Style x:Key="RemoveHilight" TargetType="ListViewItem">
+            <Setter Property="Focusable" Value="False"/>
+            <Setter Property="IsTabStop" Value="False"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Background" Value="Transparent"/>
+        </Style>
+
     </Page.Resources>
     
     <Grid>
         <ListView Style="{StaticResource CustListViewStyle}" Name="lstMainPage"
+                  ItemContainerStyle="{StaticResource RemoveHilight}"
                   Visibility="Collapsed">
             <ListViewItem HorizontalContentAlignment="Center">
                 <StackPanel Height="250" Orientation="Horizontal"
@@ -32,9 +40,10 @@
                 <ctrl:PostListControl Grid.Row="2" Grid.Column="1"/>
             </ListViewItem>
         </ListView>
-        <ListView Background="#261182" Visibility="Visible"
+        <ListView Style="{StaticResource CustListViewStyle}" Visibility="Visible" 
                   Name="lstLogin">
-            <ListViewItem HorizontalAlignment="Center"
+
+                    <ListViewItem HorizontalAlignment="Center"
                           VerticalAlignment="Center">
                 <ctrl:LoginControl/>
             </ListViewItem>
