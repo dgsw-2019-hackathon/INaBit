@@ -23,6 +23,18 @@ namespace INaBit
         public Page1()
         {
             InitializeComponent();
+            InitViewControl();
+        }
+
+        private void InitViewControl()
+        {
+            App.loginViewModel.loginDone += LoginDone;
+        }
+
+        public void LoginDone()
+        {
+            lstLogin.Visibility = Visibility.Collapsed;
+            lstMainPage.Visibility = Visibility.Visible;
         }
     }
 }

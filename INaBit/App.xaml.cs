@@ -1,4 +1,5 @@
-﻿using INaBit.ViewModel.Posts;
+﻿using INaBit.ViewModel;
+using INaBit.ViewModel.Posts;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -16,5 +17,6 @@ namespace INaBit
     public partial class App : Application
     {
         public static PostsViewModel postsViewModel = new PostsViewModel();
+        public static LoginControlViewModel loginViewModel = new LoginControlViewModel();
     }
 }

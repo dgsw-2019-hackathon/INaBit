@@ -24,7 +24,8 @@
                 <TextBlock FontSize="20" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" Background="White" Margin="74,71,316,91">PW</TextBlock>
                 <PasswordBox Height="30" Width="200" Background="Gray" Margin="124,66,101,91" CaretBrush="Black"/>
                 
-                <Button Width="150" Height="30" Margin="137,111,138,46" Background="#FF404BB4" Foreground="Black" FontWeight="Bold">
+                <Button Width="150" Height="30" Margin="137,111,138,46" Background="#FF404BB4" Foreground="Black" FontWeight="Bold"
+                        Command="{Binding LoginCommand}">
                   
                     <TextBlock FontSize="20" Foreground="White">
                     Login

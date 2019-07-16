@@ -120,6 +120,7 @@
       <DependentUpon>WebPostControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Posts\PostModel.cs" />
+    <Compile Include="ViewModel\LoginControlViewModel.cs" />
     <Compile Include="ViewModel\Posts\PostItemViewModel.cs" />
     <Compile Include="ViewModel\Posts\PostsViewModel.cs" />
     <Compile Include="View\MainPage.xaml.cs">

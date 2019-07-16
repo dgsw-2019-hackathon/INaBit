@@ -9,7 +9,8 @@
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Page1">
     <Grid>
-        <ListView Background="#261182" Name="lstMainPage">
+        <ListView Background="#261182" Name="lstMainPage"
+                  Visibility="Collapsed">
             <ListViewItem HorizontalContentAlignment="Center">
                 <StackPanel Height="250" Orientation="Horizontal"
                             VerticalAlignment="Top" HorizontalAlignment="Left"
@@ -25,9 +26,12 @@
                 <ctrl:PostListControl Grid.Row="2" Grid.Column="1"/>
             </ListViewItem>
         </ListView>
-        <ListView Background="#261182" Visibility="Collapsed"
+        <ListView Background="#261182" Visibility="Visible"
                   Name="lstLogin">
-            
+            <ListViewItem HorizontalAlignment="Center"
+                          VerticalAlignment="Center">
+                <ctrl:LoginControl/>
+            </ListViewItem>
         </ListView>
     </Grid>
 </Page>
