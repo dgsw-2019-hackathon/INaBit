@@ -104,6 +104,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\Posts\NormalPostItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\Posts\PostItemControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -149,6 +153,9 @@
     <Compile Include="Controls\PostListControl.xaml.cs">
       <DependentUpon>PostListControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Posts\NormalPostItemControl.xaml.cs">
+      <DependentUpon>NormalPostItemControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Posts\PostItemControl.xaml.cs">
       <DependentUpon>PostItemControl.xaml</DependentUpon>
     </Compile>
@@ -164,6 +171,8 @@
     <Compile Include="Model\Posts\PostModel.cs" />
     <Compile Include="ViewModel\LoginControlViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\Posts\NormalPostItemViewModel.cs" />
+    <Compile Include="ViewModel\Posts\NormalPostViewModel.cs" />
     <Compile Include="ViewModel\Posts\PostItemViewModel.cs" />
     <Compile Include="ViewModel\Posts\PostsViewModel.cs" />
     <Compile Include="View\MainPage.xaml.cs">
@@ -226,7 +235,9 @@
     <Resource Include="아이콘\icon_write.png" />
     <Resource Include="아이콘\search_icon.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Converter\" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Fonts\font.txt" />
   </ItemGroup>
