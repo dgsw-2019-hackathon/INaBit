@@ -1,4 +1,5 @@
-﻿using System;
+﻿using INaBit.Controls.Posts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,7 @@ namespace INaBit.Controls
         public IdeaListControl()
         {
             InitializeComponent();
-            this.DataContext = App.IdeaPostViewModel;
+            this.DataContext = App.normalPost;
         }
     }
 }

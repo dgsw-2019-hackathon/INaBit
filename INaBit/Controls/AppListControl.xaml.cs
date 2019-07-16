@@ -23,7 +23,7 @@ namespace INaBit.Controls
         public AppListControl()
         {
             InitializeComponent();
-            this.DataContext = App.AppPostViewModel;
+            
         }
     }
 }

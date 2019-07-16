@@ -23,8 +23,6 @@ namespace INaBit
         public static PostsViewModel postsViewModel = new PostsViewModel();
         public static LoginControlViewModel loginViewModel = new LoginControlViewModel();
         public static MainViewModel mainViewModel = new MainViewModel();
-        public static NormalPostItemViewModel WebPostViewModel = new NormalPostItemViewModel();
-        public static NormalPostItemViewModel AppPostViewModel = new NormalPostItemViewModel();
-        public static NormalPostItemViewModel IdeaPostViewModel = new NormalPostItemViewModel();
+        public static NormalPostViewModel normalPost = new NormalPostViewModel();
     }
 }

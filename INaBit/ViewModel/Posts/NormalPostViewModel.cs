@@ -11,12 +11,16 @@ namespace INaBit.ViewModel.Posts
 {
     public class NormalPostViewModel : BindableBase
     {
-        private ObservableCollection<NormalPostItemControl> _items = new ObservableCollection<NormalPostItemControl>();
+        private ObservableCollection<NormalPostItemControl> _items;
         public ObservableCollection<NormalPostItemControl> Items
         {
             get => _items;
             set => SetProperty(ref _items, value);
         }
 
+        public NormalPostViewModel()
+        {
+            Items = new ObservableCollection<NormalPostItemControl>();
+        }
     }
 }

@@ -168,10 +168,10 @@
     <Compile Include="Controls\WebPostWriteControl.xaml.cs">
       <DependentUpon>WebPostWriteControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converter\RecommandConverter.cs" />
     <Compile Include="Model\Posts\PostModel.cs" />
     <Compile Include="ViewModel\LoginControlViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
-    <Compile Include="ViewModel\Posts\NormalPostItemViewModel.cs" />
     <Compile Include="ViewModel\Posts\NormalPostViewModel.cs" />
     <Compile Include="ViewModel\Posts\PostItemViewModel.cs" />
     <Compile Include="ViewModel\Posts\PostsViewModel.cs" />
@@ -235,11 +235,14 @@
     <Resource Include="아이콘\icon_write.png" />
     <Resource Include="아이콘\search_icon.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Converter\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Fonts\font.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="아이콘\one_heart.png" />
+    <Resource Include="아이콘\three_heart.png" />
+    <Resource Include="아이콘\two_heart.png" />
   </ItemGroup>
   <PropertyGroup>
     <StartArguments />
