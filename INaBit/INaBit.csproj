@@ -76,7 +76,15 @@
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="Controls\AppListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\AppPostWriteControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\IdeaListControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -100,6 +108,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\WebListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\WebPostControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -116,8 +128,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controls\AppListControl.xaml.cs">
+      <DependentUpon>AppListControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\AppPostWriteControl.xaml.cs">
       <DependentUpon>AppPostWriteControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IdeaListControl.xaml.cs">
+      <DependentUpon>IdeaListControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\IdeaPostWriteControl.xaml.cs">
       <DependentUpon>IdeaPostWriteControl.xaml</DependentUpon>
@@ -133,6 +151,9 @@
     </Compile>
     <Compile Include="Controls\Posts\PostItemControl.xaml.cs">
       <DependentUpon>PostItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WebListControl.xaml.cs">
+      <DependentUpon>WebListControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\WebPostControl.xaml.cs">
       <DependentUpon>WebPostControl.xaml</DependentUpon>
