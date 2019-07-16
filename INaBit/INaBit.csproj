@@ -123,6 +123,13 @@
     <Folder Include="Model\" />
     <Folder Include="ViewModel\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\HandLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\like.png" />
+    <Resource Include="Assets\Medal.png" />
+  </ItemGroup>
   <PropertyGroup>
     <StartArguments />
   </PropertyGroup>
