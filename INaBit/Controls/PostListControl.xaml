@@ -7,11 +7,32 @@
              xmlns:ctrl="clr-namespace:INaBit.Controls.Posts"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style x:Key="ListViewItem" TargetType="ListViewItem">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type  ListViewItem}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Transparent"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    
     <Grid>
 
         <ListView ItemsSource="{Binding Items}" 
+                  ItemContainerStyle="{StaticResource ListViewItem}"
                   Background="Transparent"
                   BorderBrush="Transparent">
+            
         </ListView>
         
         
