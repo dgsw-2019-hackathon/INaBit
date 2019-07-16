@@ -8,8 +8,14 @@
       xmlns:ctrl="clr-namespace:INaBit.Controls"
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Page1">
+    <Page.Resources>
+        <Style x:Key="CustListViewStyle" TargetType="ListView">
+            <Setter Property="Background" Value="#261182"/>
+        </Style>
+    </Page.Resources>
+    
     <Grid>
-        <ListView Background="#261182" Name="lstMainPage"
+        <ListView Style="{StaticResource CustListViewStyle}" Name="lstMainPage"
                   Visibility="Collapsed">
             <ListViewItem HorizontalContentAlignment="Center">
                 <StackPanel Height="250" Orientation="Horizontal"
