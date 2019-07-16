@@ -1,4 +1,5 @@
-﻿using System;
+﻿using INaBit.ViewModel.Posts;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -14,5 +15,6 @@ namespace INaBit
     /// </summary>
     public partial class App : Application
     {
+        public static PostsViewModel postsViewModel = new PostsViewModel();
     }
 }

@@ -21,12 +21,10 @@ namespace INaBit.Controls
     /// </summary>
     public partial class PostListControl : UserControl
     {
-        PostsViewModel viewModel;
         public PostListControl()
         {
             InitializeComponent();
-            viewModel = new PostsViewModel();
-            DataContext = viewModel;
+            DataContext = App.postsViewModel;
         }
     }
 }

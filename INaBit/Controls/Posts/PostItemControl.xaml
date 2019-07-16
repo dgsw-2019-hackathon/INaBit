@@ -11,8 +11,10 @@
         <Grid Background="White" MinWidth="800"
               Margin="50,30,0,30">
             <TextBlock Text="{Binding Path=Title}" 
+                       VerticalAlignment="Center"
                        HorizontalAlignment="Left"/>
-            <TextBlock HorizontalAlignment="Right">
+            <TextBlock HorizontalAlignment="Right"
+                       VerticalAlignment="Center">
                 <Run Text="작성자 : "/>
                 <Run Text="{Binding Path=Writer}"/>
             </TextBlock>
