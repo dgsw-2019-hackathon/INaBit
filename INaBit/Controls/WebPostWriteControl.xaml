@@ -41,8 +41,8 @@
                 </Border.Background>
             </Border>
             <TextBlock FontSize="30" FontWeight="Bold" Margin="-112,-82,842,543">제목:</TextBlock>
-            <TextBox FontSize="25" Background="White" Margin="-37,-88,-113,535" BorderBrush="Black" BorderThickness="4"/>
-            <TextBox TextWrapping="Wrap" FontSize="20" Background="White" Margin="-112,-30,-113,124" BorderBrush="Black" BorderThickness="4"/>
+            <TextBox x:Name="Title" FontSize="25" Background="White" Margin="-37,-88,-113,535" BorderBrush="Black" BorderThickness="4"/>
+            <TextBox x:Name="PostContent" TextWrapping="Wrap" FontSize="20" Background="White" Margin="-112,-30,-113,124" BorderBrush="Black" BorderThickness="4"/>
         </Grid>
         <Grid Width="800" Height="62" Margin="0,820,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Border  BorderThickness="10" CornerRadius="20" Margin="-146,-101,-138,82" BorderBrush="Black" RenderTransformOrigin="0.5,0.5">
@@ -61,7 +61,8 @@
             <TextBlock FontSize="30" FontWeight="Bold" Margin="-112,-81,832,101">URL:</TextBlock>
             <TextBox FontSize="25" Margin="-32,-81,32,101"/>
             <Border CornerRadius="20" BorderThickness="3" BorderBrush="White" Margin="797,-81,-111,101" Background="#FFC5C6D6">
-                <Button FontWeight="Bold" Foreground="Black">
+                <Button FontWeight="Bold" Foreground="Black"
+                        Click="Button_Click">
                     <Button.BorderBrush>
                         <SolidColorBrush Color="#FF707070" Opacity="0"/>
                     </Button.BorderBrush>

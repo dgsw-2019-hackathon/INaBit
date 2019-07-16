@@ -39,7 +39,7 @@ namespace INaBit.Controls
                     App.AppListViewModel.Items[0].viewModel.Recommand = 200;
                     App.AppListViewModel.Items[0].viewModel.Title = "MFC 정말 훌륭한 라이브러리에요^^";
                     App.AppListViewModel.Items[0].viewModel.Writer = "hbmin3789";
-                    App.AppListViewModel.Items[1].viewModel.Title = "MFC 같은 쓰레기와는 차원이 다른 라이브러리입니다.";
+                    App.AppListViewModel.Items[1].viewModel.Title = "MFC 와는 차원이 다른 라이브러리입니다.";
                     App.AppListViewModel.Items[1].viewModel.Writer = "hbmin3789";
                     App.AppListViewModel.Items[1].viewModel.Recommand = 500;
                     App.AppListViewModel.Items[2].viewModel.Recommand = 700;
@@ -55,6 +55,10 @@ namespace INaBit.Controls
                     {
                         App.AppListViewModel.Items[i].viewModel.Idx = (i+1);
                     }
+                    App.AppListViewModel.Items[0].control = new WebPostControl();
+                    App.AppListViewModel.Items[0].control.DataContext = App.AppListViewModel.Items[0].viewModel;
+                    App.AppListViewModel.Items[1].control = new WebPostControl();
+                    App.AppListViewModel.Items[2].control = new WebPostControl();
                 }
             }
             this.DataContext = App.AppListViewModel;

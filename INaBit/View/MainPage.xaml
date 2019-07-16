@@ -79,15 +79,20 @@
                     <StackPanel HorizontalAlignment="Center"
                         VerticalAlignment="Center">
                         <Grid Margin="0,0,0,-80" Width="600" Height="50">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="109*"/>
+                                <ColumnDefinition Width="11*"/>
+                            </Grid.ColumnDefinitions>
                             <TextBox Template="{StaticResource TextBoxBaseControlTemplate}"
                              Width="560" Height="50" FontSize="24"
                              VerticalContentAlignment="Center"
-                             BorderBrush="Transparent" Margin="20,-36,20,36"></TextBox>
+                             BorderBrush="Transparent" Margin="20,-36,20,36" Grid.ColumnSpan="2"></TextBox>
 
                             <Image Height="50" Source="/아이콘/search_icon.png"
                            HorizontalAlignment="Right"
                            Margin="0,-36,30,36"
-                           Cursor="Hand"/>
+                           Cursor="Hand" Grid.ColumnSpan="2"
+                            MouseDown="Image_MouseDown_1"/>
                         </Grid>
                         <Grid Height="250" VerticalAlignment="top"
                           Margin="0,50,0,0">
@@ -118,18 +123,23 @@
                         <ctrl:PostListControl VerticalAlignment="Bottom"/>
                     </StackPanel>
                 </ScrollViewer>
+                
+                
+                
                 <ScrollViewer x:Name="LoginCtrl" Visibility="Collapsed">
                     <ScrollViewer.Background>
                         <ImageBrush ImageSource="/디자인/BackGroundImage.jpg"/>
                     </ScrollViewer.Background>
                     <ctrl:LoginControl/>
                 </ScrollViewer>
+                
+                
+                
                 <ScrollViewer x:Name="PageCtrl" Visibility="Collapsed">
                     <ScrollViewer.Background>
                         <ImageBrush ImageSource="/디자인/BackGroundImage.jpg"/>
                     </ScrollViewer.Background>
                     <Grid x:Name="PageGrid">
-
                     </Grid>
                 </ScrollViewer>
             </Grid>

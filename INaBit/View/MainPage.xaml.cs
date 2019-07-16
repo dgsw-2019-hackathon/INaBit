@@ -32,6 +32,7 @@ namespace INaBit
         {
             App.loginViewModel.loginDone += LoginDone;
             App.setView += PageView;
+            App.back += Back;
         }
 
         public void LoginDone()
@@ -39,6 +40,7 @@ namespace INaBit
             LoginCtrl.Visibility = Visibility.Collapsed;
             MainCtrl.Visibility = Visibility.Visible;
         }
+
         public void SetViewMain()
         {
             PageCtrl.Visibility = Visibility.Collapsed;
@@ -56,6 +58,20 @@ namespace INaBit
         {
             PageCtrl.Visibility = Visibility.Collapsed;
             MainCtrl.Visibility = Visibility.Visible;
+            PageGrid.Children.Clear();
+        }
+
+        private void Back()
+        {
+            var parent = PageGrid.Children[0];
+            PageGrid.Children.Clear();
+            PageGrid.Children.Add(parent);
+            MessageBox.Show(App.WebListViewModel.Items.Count.ToString());
+        }
+
+        private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }

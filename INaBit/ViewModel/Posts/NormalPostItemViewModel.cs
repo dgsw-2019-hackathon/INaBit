@@ -1,9 +1,12 @@
-﻿using Prism.Mvvm;
+﻿using Prism.Commands;
+using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
 
 namespace INaBit.ViewModel.Posts
 {
@@ -33,6 +36,26 @@ namespace INaBit.ViewModel.Posts
         {
             get => _recommand;
             set => SetProperty(ref _recommand, value);
+        }
+
+        private string _content;
+        public string Content
+        {
+            get => _content;
+            set => SetProperty(ref _content, value);
+        }
+
+        public ICommand OnRecommandCommand { get; set; }
+
+        public NormalPostItemViewModel()
+        {
+            OnRecommandCommand = new DelegateCommand(OnRecommand);
+        }
+
+        private void OnRecommand()
+        {
+            MessageBox.Show("asd");
+            Recommand++;
         }
     }
 }

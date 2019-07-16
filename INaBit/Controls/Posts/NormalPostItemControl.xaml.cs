@@ -22,11 +22,17 @@ namespace INaBit.Controls.Posts
     public partial class NormalPostItemControl : UserControl
     {
         public NormalPostItemViewModel viewModel = new NormalPostItemViewModel();
+        public UserControl control;
         public NormalPostItemControl()
         {
             InitializeComponent();
             this.DataContext = viewModel;
 
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            App.setView(control);
         }
     }
 }

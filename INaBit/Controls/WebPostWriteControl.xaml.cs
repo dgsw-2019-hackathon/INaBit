@@ -29,9 +29,18 @@ namespace INaBit.Controls
         void OnPostingClicked()
         {
             NormalPostItemControl newItem = new NormalPostItemControl();
-            newItem.viewModel.Title = "Title";
-            newItem.viewModel.Writer = App.NickName;
+            newItem.viewModel.Title = Title.Text;
+            newItem.viewModel.Writer = (App.NickName == null) ? "DGSW":App.NickName;
+            newItem.viewModel.Content = PostContent.Text;
+            newItem.control = new WebPostControl();
+            newItem.control.DataContext = newItem.viewModel;
             App.WebListViewModel.Items.Add(newItem);
+            App.back();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            OnPostingClicked();
         }
     }
 }

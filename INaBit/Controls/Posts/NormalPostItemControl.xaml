@@ -10,7 +10,7 @@
     <UserControl.Resources>
         <converter:RecommandConverter x:Key="Converter"/>
     </UserControl.Resources>
-    <Grid Height="150">
+    <Grid Height="150" Cursor="Hand" MouseDown="Grid_MouseDown">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="80"/>
             <ColumnDefinition Width="*"/>

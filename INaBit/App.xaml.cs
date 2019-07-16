@@ -18,10 +18,13 @@ namespace INaBit
     public partial class App : Application
     {
         public delegate void SetView(UserControl control);
+        public delegate void Back();
+
 
         public static string NickName;
 
         public static SetView setView;
+        public static Back back;
 
         public static PostsViewModel postsViewModel = new PostsViewModel();
         public static LoginControlViewModel loginViewModel = new LoginControlViewModel();
