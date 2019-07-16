@@ -18,10 +18,27 @@
             <Setter Property="BorderBrush" Value="Transparent"/>
             <Setter Property="Background" Value="Transparent"/>
         </Style>
-        <Style TargetType="TextBlock" x:Key="TextDisplayStyle">
+        <Style TargetType="Button" x:Key="ButtonStyle">
             <Setter Property="FontSize" Value="30"/>
-            <Setter Property="Margin" Value="100,0,0,0"/>
+            <Setter Property="Margin" Value="80,0,0,0"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Transparent"/>
+                </Trigger>
+            </Style.Triggers>
         </Style>
         <ControlTemplate x:Key="TextBoxBaseControlTemplate" TargetType="{x:Type TextBoxBase}">
             <Border Background="White"
@@ -62,9 +79,9 @@
                             Grid.ColumnSpan="2" Margin="0,0,0,50"
                             Height="80" Width="700">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="아이디어" Style="{StaticResource TextDisplayStyle}"/>
-                            <TextBlock Text="아이디어" Style="{StaticResource TextDisplayStyle}"/>
-                            <TextBlock Text="아이디어" Style="{StaticResource TextDisplayStyle}"/>
+                            <Button Content="아이디어" Style="{StaticResource ButtonStyle}"/>
+                            <Button Content="유용한 웹" Style="{StaticResource ButtonStyle}"/>
+                            <Button Content="유용한 앱" Style="{StaticResource ButtonStyle}"/>
                         </StackPanel>
                     </Border>
 
