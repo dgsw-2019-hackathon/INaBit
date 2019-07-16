@@ -22,6 +22,7 @@ namespace INaBit.Controls.Posts
     public partial class NormalPostItemControl : UserControl
     {
         public NormalPostItemViewModel viewModel;
+        public UserControl userControl;
         public NormalPostItemControl()
         {
             InitializeComponent();

@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:INaBit.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#FFDC9292" Margin="0,0,-414,-500">
+    <Grid Background="#FFDC9292">
         <Grid Background="#FF706DBD" Width="800" Height="100" HorizontalAlignment="Center" Margin="0,118,0,0" VerticalAlignment="Top">
             <Image Height="100" Source="/Assets/HandLight.png" Margin="0,-2,696,2" RenderTransformOrigin="0.5,0.5">
                 <Image.RenderTransform>
@@ -22,7 +22,7 @@
         </Grid>
 
         <Grid Background="#FF706DBD" Width="800" Height="500" Margin="0,290,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <ListView Margin="10">
+            <ListView Margin="10" ItemsSource="{Binding Items}">
 
             </ListView>
         </Grid>
