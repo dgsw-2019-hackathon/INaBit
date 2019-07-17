@@ -259,7 +259,9 @@
     <Resource Include="아이콘\icon_write.png" />
     <Resource Include="아이콘\search_icon.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="디자인\BasePicture.jpeg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Fonts\font.txt" />
   </ItemGroup>

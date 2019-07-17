@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 
 namespace INaBit.ViewModel.Posts
 {
@@ -34,6 +35,9 @@ namespace INaBit.ViewModel.Posts
             Items[0].control = new WebPostControl();
             Items[1].control = new WebPostControl();
             Items[2].control = new WebPostControl();
+            (Items[0].control as WebPostControl).imgImage.Source = new BitmapImage(new Uri("/디자인/BasePicture.jpeg", UriKind.Relative));
+            (Items[1].control as WebPostControl).imgImage.Source = new BitmapImage(new Uri("/디자인/screen_close.png", UriKind.Relative));
+            (Items[2].control as WebPostControl).imgImage.Source = new BitmapImage(new Uri("/디자인/screen2.png", UriKind.Relative));
             Items[0].control.DataContext = new PostItemViewModel() { Recommand = 3827,Content = "반짝이는 아이디어입니다." ,Title = Items[0].viewModel.Title};
             Items[1].control.DataContext = new PostItemViewModel() { Recommand = 7271 , Content = "앙 기모찌", Title = Items[1].viewModel.Title };
             Items[2].control.DataContext = new PostItemViewModel() { Recommand = 5261 , Content = "데헷", Title = Items[2].viewModel.Title };

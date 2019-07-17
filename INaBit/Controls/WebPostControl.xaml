@@ -58,7 +58,7 @@
                 <Border.Background>
                     <SolidColorBrush Color="White" Opacity="0.3"/>
                 </Border.Background>
-                
+                <Image x:Name="imgImage"/>
             </Border>
         </Grid>
         

@@ -82,7 +82,6 @@ namespace INaBit
             var parent = PageGrid.Children[0];
             PageGrid.Children.Clear();
             PageGrid.Children.Add(parent);
-            MessageBox.Show(StaticVar.WebListViewModel.Items.Count.ToString());
         }
 
         private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
