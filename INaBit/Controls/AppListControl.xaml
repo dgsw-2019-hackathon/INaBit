@@ -79,7 +79,7 @@
                 </Border.Background>
             </Border>
             <Border CornerRadius="20" BorderThickness="3" BorderBrush="White" Margin="793,-84,-107,104" Background="#FFC5C6D6">
-                <Button FontWeight="Bold" Foreground="Black"
+                <Button FontWeight="Bold" Foreground="Black" Click="Button_Click"
                         Style="{StaticResource ButtonStyle}" Cursor="Hand">
                     <Button.BorderBrush>
                         <SolidColorBrush Color="#FF707070" Opacity="0"/>

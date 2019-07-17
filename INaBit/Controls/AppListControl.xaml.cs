@@ -71,5 +71,10 @@ namespace INaBit.Controls
                 
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            StaticVar.setView(new WebPostWriteControl());
+        }
     }
 }

@@ -53,7 +53,7 @@
                 </Border.Background>
             </Border>
 
-            <ListView Margin="-116,-95,-110,10" ItemsSource="{Binding Items}">
+            <ListView x:Name="lstSearch" Margin="-116,-95,-110,10">
 
             </ListView>
         </Grid>

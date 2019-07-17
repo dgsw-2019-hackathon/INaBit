@@ -14,6 +14,13 @@ namespace INaBit.ViewModel.Posts
 {
     public class PostItemViewModel : BindableBase
     {
+        private string _content;
+        public string Content
+        {
+            get => _content;
+            set => SetProperty(ref _content,value);
+        }
+
         private string _category;
         public string Category
         {

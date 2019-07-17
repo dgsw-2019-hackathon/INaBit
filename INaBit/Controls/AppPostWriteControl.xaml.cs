@@ -46,11 +46,14 @@ namespace INaBit.Controls
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             NormalPostItemControl newItem = new NormalPostItemControl();
-            newItem.control = this;
-            newItem.viewModel.Title = "";
-            newItem.viewModel.Writer = "";
-            newItem.viewModel.Recommand = 0;
+            newItem.viewModel.Title = tbTitle.Text;
+            newItem.viewModel.Writer = (StaticVar.NickName == null) ? "DGSW" : StaticVar.NickName;
+            newItem.viewModel.Content = tbContent.Text;
+            newItem.control = new WebPostControl();
+            newItem.control.DataContext = newItem.viewModel;
+            StaticVar.back();
             StaticVar.AppListViewModel.Items.Add(newItem);
         }
+
     }
 }

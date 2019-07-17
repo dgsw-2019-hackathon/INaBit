@@ -85,6 +85,7 @@
                                 <ColumnDefinition Width="11*"/>
                             </Grid.ColumnDefinitions>
                             <TextBox Template="{StaticResource TextBoxBaseControlTemplate}"
+                                     x:Name="tbSearch"
                              Width="560" Height="50" FontSize="24"
                              VerticalContentAlignment="Center"
                              BorderBrush="Transparent" Margin="20,-36,20,36" Grid.ColumnSpan="2"></TextBox>
@@ -150,7 +151,14 @@
                     </ScrollViewer.Background>
                     <ctrl:JoinControl/>
                 </ScrollViewer>
-                
+
+                <ScrollViewer x:Name="SearchCtrl" Visibility="Collapsed">
+                    <ScrollViewer.Background>
+                        <ImageBrush ImageSource="/디자인/BackGroundImage.jpg"/>
+                    </ScrollViewer.Background>
+                    <ctrl:SearchList x:Name="SearchControl"/>
+                </ScrollViewer>
+
             </Grid>
         </Grid>
     </Grid>
