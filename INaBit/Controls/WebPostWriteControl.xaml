@@ -59,7 +59,8 @@
                 </Border.Background>
             </Border>
             <TextBlock FontSize="30" FontWeight="Bold" Margin="-112,-81,832,101">URL:</TextBlock>
-            <TextBox FontSize="25" Margin="-32,-81,32,101"/>
+            <TextBox FontSize="25" Margin="-32,-81,32,101"
+                     Text="{Binding WebUri}"/>
             <Border CornerRadius="20" BorderThickness="3" BorderBrush="White" Margin="797,-81,-111,101" Background="#FFC5C6D6">
                 <Button FontWeight="Bold" Foreground="Black"
                         Click="Button_Click">

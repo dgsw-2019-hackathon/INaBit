@@ -41,7 +41,7 @@ namespace INaBit.ViewModel
 
         private void OnLogin()
         {
-            App.NickName = Id;
+            StaticVar.NickName = Id;
             MessageBox.Show("로그인에 성공하였습니다.");
             loginDone?.Invoke();
             

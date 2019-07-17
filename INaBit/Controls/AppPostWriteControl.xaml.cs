@@ -50,7 +50,7 @@ namespace INaBit.Controls
             newItem.viewModel.Title = "";
             newItem.viewModel.Writer = "";
             newItem.viewModel.Recommand = 0;
-            App.AppListViewModel.Items.Add(newItem);
+            StaticVar.AppListViewModel.Items.Add(newItem);
         }
     }
 }

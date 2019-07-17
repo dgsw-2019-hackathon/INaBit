@@ -24,7 +24,7 @@ namespace INaBit.Controls
         public PostListControl()
         {
             InitializeComponent();
-            DataContext = App.postsViewModel;
+            DataContext = StaticVar.postsViewModel;
         }
     }
 }

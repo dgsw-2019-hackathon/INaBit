@@ -24,16 +24,16 @@ namespace INaBit.Controls
         public WebListControl()
         {
             InitializeComponent();
-            if(App.WebListViewModel == null)
+            if(StaticVar.WebListViewModel == null)
             {
-                App.WebListViewModel = new ViewModel.Posts.NormalPostViewModel();
+                StaticVar.WebListViewModel = new ViewModel.Posts.NormalPostViewModel();
             }
-            this.DataContext = App.WebListViewModel;
+            this.DataContext = StaticVar.WebListViewModel;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            App.setView(new WebPostWriteControl());
+            StaticVar.setView(new WebPostWriteControl());
         }
     }
 }

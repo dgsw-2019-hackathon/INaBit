@@ -191,6 +191,7 @@
     </Compile>
     <Compile Include="Converter\RecommandConverter.cs" />
     <Compile Include="Model\Posts\PostModel.cs" />
+    <Compile Include="StaticVar.cs" />
     <Compile Include="ViewModel\LoginControlViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\Posts\NormalPostItemViewModel.cs" />

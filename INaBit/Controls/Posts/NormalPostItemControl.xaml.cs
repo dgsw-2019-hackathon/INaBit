@@ -32,7 +32,8 @@ namespace INaBit.Controls.Posts
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            App.setView(control);
+            StaticVar.setView(control);
+            StaticVar.HideBackground();
         }
     }
 }
