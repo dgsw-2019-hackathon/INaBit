@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="800">
     <Grid>
-        <Grid Width="800" Height="100" HorizontalAlignment="Center" Margin="0,118,0,0" VerticalAlignment="Top">
+        <Grid Width="800" Height="100" HorizontalAlignment="Center" Margin="2,-172,-2,0" VerticalAlignment="Top">
             <Border  BorderThickness="10" CornerRadius="10" Background="White" Margin="56,450,424,-446">
                 <Border.BorderBrush>
                     <SolidColorBrush Color="Black"/>
@@ -16,7 +16,7 @@
             </Border>
         </Grid>
 
-        <Grid Width="800" Height="500" Margin="0,290,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+        <Grid Width="800" Height="501" Margin="2,0,-2,0" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Border  BorderThickness="10" CornerRadius="20" Margin="6,364,14,-208" BorderBrush="Black" RenderTransformOrigin="0.5,0.5">
                 <Border.RenderTransform>
                     <TransformGroup>
@@ -35,27 +35,27 @@
                 <TextBlock.Background>
                     <SolidColorBrush Color="White" Opacity="0"/>
                 </TextBlock.Background><Run Text="Name"/></TextBlock>
-            <TextBox FontSize="30" Height="30" Background="White" Margin="264,410,239,60" CaretBrush="Black" BorderBrush="Black" BorderThickness="3"/>
+            <TextBox x:Name="tbName" FontSize="30" Height="30" Background="White" Margin="264,410,239,60" CaretBrush="Black" BorderBrush="Black" BorderThickness="3"/>
 
             <TextBlock FontSize="30" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" Margin="172,466,541,4">
                 <TextBlock.Background>
                     <SolidColorBrush Color="White" Opacity="0"/>
                 </TextBlock.Background><Run Text="Email"/></TextBlock>
-            <TextBox FontSize="30" Height="30" Background="White" Margin="264,466,239,4" CaretBrush="Black"  BorderBrush="Black" BorderThickness="3"/>
+            <TextBox x:Name="tbEmail" FontSize="30" Height="30" Background="White" Margin="264,466,239,4" CaretBrush="Black"  BorderBrush="Black" BorderThickness="3"/>
 
             <TextBlock FontSize="30" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" Margin="204,524,559,-54">
                 <TextBlock.Background>
                     <SolidColorBrush Color="White" Opacity="0"/>
                 </TextBlock.Background>ID</TextBlock>
-            <TextBox FontSize="30" Height="30" Background="White" Margin="264,524,239,-54" CaretBrush="Black"  BorderBrush="Black" BorderThickness="3"/>
+            <TextBox x:Name="tbId" FontSize="30" Height="30" Background="White" Margin="264,524,239,-54" CaretBrush="Black"  BorderBrush="Black" BorderThickness="3"/>
 
             <TextBlock FontSize="30" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" Margin="204,582,541,-110">
                 <TextBlock.Background>
                     <SolidColorBrush Color="White" Opacity="0"/>
                 </TextBlock.Background>PW</TextBlock>
-            <PasswordBox FontSize="30" Height="30" Background="White" Margin="264,582,239,-112" CaretBrush="Black"  BorderBrush="Black" BorderThickness="3"/>
+            <PasswordBox x:Name="tbPw" FontSize="30" Height="30" Background="White" Margin="264,582,239,-112" CaretBrush="Black"  BorderBrush="Black" BorderThickness="3"/>
 
-            <Button Margin="303,630,336,-176" Background="#FF33386A" Foreground="Black" FontWeight="Bold">
+            <Button Margin="303,630,336,-176" Background="#FF33386A" Foreground="Black" FontWeight="Bold" Click="Button_Click">
 
                 <TextBlock FontSize="20" Foreground="White">
                     Join

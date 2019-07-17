@@ -34,6 +34,7 @@ namespace INaBit
             StaticVar.setView += PageView;
             StaticVar.back += Back;
             StaticVar.HideBackground += HideBack;
+            StaticVar.joinDone += JoinDone;
         }
 
         public void LoginDone()
@@ -67,6 +68,12 @@ namespace INaBit
             PageGrid.Children[0].Visibility = Visibility.Collapsed;
         }
 
+        private void JoinDone()
+        {
+            RegisterCtrl.Visibility = Visibility.Collapsed;
+            MainCtrl.Visibility = Visibility.Visible;
+        }
+
         private void Back()
         {
             var parent = PageGrid.Children[0];
@@ -78,6 +85,12 @@ namespace INaBit
         private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
         {
 
+        }
+
+        private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            MainCtrl.Visibility = Visibility.Collapsed;
+            RegisterCtrl.Visibility = Visibility.Visible;
         }
     }
 }

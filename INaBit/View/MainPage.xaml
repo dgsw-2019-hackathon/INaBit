@@ -67,7 +67,8 @@
                    MouseDown="Image_MouseDown"
                    Source="/디자인/inavitLogo.png" Grid.ColumnSpan="2"/>
             <TextBlock FontSize="15" Margin="0,25,135,18" Foreground="White" Grid.Column="1" HorizontalAlignment="Right">로그인</TextBlock>
-            <TextBlock FontSize="15" Margin="0,25,40,18" Foreground="White" Grid.Column="1" HorizontalAlignment="Right">회원가입</TextBlock>
+            <TextBlock FontSize="15" Margin="0,25,40,18" Foreground="White" Grid.Column="1" HorizontalAlignment="Right"
+                       MouseDown="TextBlock_MouseDown">회원가입</TextBlock>
         </Grid>
         <Grid Grid.Row="1">
             <Grid>
@@ -142,6 +143,14 @@
                     <Grid x:Name="PageGrid">
                     </Grid>
                 </ScrollViewer>
+
+                <ScrollViewer x:Name="RegisterCtrl" Visibility="Collapsed">
+                    <ScrollViewer.Background>
+                        <ImageBrush ImageSource="/디자인/BackGroundImage.jpg"/>
+                    </ScrollViewer.Background>
+                    <ctrl:JoinControl/>
+                </ScrollViewer>
+                
             </Grid>
         </Grid>
     </Grid>

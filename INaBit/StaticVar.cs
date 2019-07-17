@@ -18,12 +18,17 @@ namespace INaBit
         public delegate void SetView(UserControl control);
         public delegate void Back();
 
+        public static List<string> users = new List<string>();
+        public static List<string> ids = new List<string>();
+        public static List<string> pws = new List<string>();
+        public static List<string> emails = new List<string>();
 
         public static string NickName;
 
         public static SetView setView;
         public static Back back;
         public static Back HideBackground;
+        public static Back joinDone;
 
         public static PostsViewModel postsViewModel = new PostsViewModel();
         public static LoginControlViewModel loginViewModel = new LoginControlViewModel();

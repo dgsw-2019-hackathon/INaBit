@@ -24,5 +24,26 @@ namespace INaBit.Controls
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (StaticVar.ids.Where(x => x.Equals(tbId.Text)).FirstOrDefault() != null)
+            {
+                MessageBox.Show("중복된 아이디입니다.");
+                return;
+            }
+            if (StaticVar.emails.Where(x => x.Equals(tbEmail.Text)).FirstOrDefault() != null)
+            {
+                MessageBox.Show("중복된 이메일입니다.");
+                return;
+            }
+            StaticVar.users.Add(tbName.Text);
+            StaticVar.pws.Add(tbPw.Password);
+            StaticVar.ids.Add(tbId.Text);
+            StaticVar.emails.Add(tbEmail.Text);
+            MessageBox.Show("회원가입에 성공하였습니다.");
+            StaticVar.joinDone();
+            
+        }
     }
 }

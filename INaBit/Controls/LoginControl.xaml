@@ -52,7 +52,8 @@
                 <TextBox FontSize="20" Width="250" Height="30" Background="White" CaretBrush="Black"
                          Margin="0,0,0,40"
                          Text="{Binding Id}"  BorderBrush="Black" BorderThickness="3" Grid.ColumnSpan="2"/>
-                <PasswordBox FontSize="20" 
+                <TextBox FontSize="20" 
+                         Text="{Binding Pwd}"
                              Margin="0,40,0,0"
                              Width="250" Height="30" Background="White"  CaretBrush="Black"  BorderBrush="Black" BorderThickness="3" Grid.ColumnSpan="2"/>
             </Grid>
