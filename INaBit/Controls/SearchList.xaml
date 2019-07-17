@@ -27,14 +27,14 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <TextBlock FontSize="35" FontWeight="Bold" Margin="-41,-44,199,94">검색</TextBlock>
-            <TextBox Height="50" FontSize="24"
+            <TextBlock FontSize="35" FontWeight="Bold" Margin="-47,-55,205,105">검색</TextBlock>
+            <TextBox BorderBrush="Black " BorderThickness="5" Height="50" FontSize="24"
                              VerticalContentAlignment="Center"
-                             BorderBrush="Transparent" Margin="54,-44,58,94" OpacityMask="Black" Background="#FF9C9C9C" Grid.ColumnSpan="2"/>
+                             Margin="54,-55,58,105" OpacityMask="Black" Background="#FF9C9C9C" Grid.ColumnSpan="2"/>
 
             <Image Height="50" Source="/아이콘/search_icon.png"
                            HorizontalAlignment="Right"
-                           Margin="0,-44,58,94"
+                           Margin="0,-55,58,105"
                            Cursor="Hand" OpacityMask="Black" Grid.Column="1"/>
         </Grid>
 
