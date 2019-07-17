@@ -36,16 +36,8 @@ namespace INaBit
 
         public static void SortAppList()
         {
-            if (AppListViewModel.Items.Count == 0)
-            {
-                MessageBox.Show("sibal");
-            }
             AppListViewModel.Items = new ObservableCollection<Controls.Posts.NormalPostItemControl>(
                 AppListViewModel.Items.OrderByDescending(x => x.viewModel.Recommand));
-            if(AppListViewModel.Items.Count == 0)
-            {
-                MessageBox.Show("sibal");
-            }
             for(int i = 0; i < AppListViewModel.Items.Count; i++)
             {
                 AppListViewModel.Items[i].viewModel = new NormalPostItemViewModel();
