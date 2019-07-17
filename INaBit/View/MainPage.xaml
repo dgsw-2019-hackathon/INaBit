@@ -123,18 +123,18 @@
                         <ctrl:PostListControl VerticalAlignment="Bottom"/>
                     </StackPanel>
                 </ScrollViewer>
-                
-                
-                
+
+
+
                 <ScrollViewer x:Name="LoginCtrl" Visibility="Collapsed">
                     <ScrollViewer.Background>
                         <ImageBrush ImageSource="/디자인/BackGroundImage.jpg"/>
                     </ScrollViewer.Background>
                     <ctrl:LoginControl/>
                 </ScrollViewer>
-                
-                
-                
+
+
+
                 <ScrollViewer x:Name="PageCtrl" Visibility="Collapsed">
                     <ScrollViewer.Background>
                         <ImageBrush ImageSource="/디자인/BackGroundImage.jpg"/>

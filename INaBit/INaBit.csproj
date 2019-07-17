@@ -120,6 +120,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\SearchList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\WebListControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -172,6 +176,9 @@
     </Compile>
     <Compile Include="Controls\Posts\PostItemControl.xaml.cs">
       <DependentUpon>PostItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchList.xaml.cs">
+      <DependentUpon>SearchList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\WebListControl.xaml.cs">
       <DependentUpon>WebListControl.xaml</DependentUpon>
