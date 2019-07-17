@@ -198,6 +198,7 @@
     <Compile Include="ViewModel\Posts\NormalPostViewModel.cs" />
     <Compile Include="ViewModel\Posts\PostItemViewModel.cs" />
     <Compile Include="ViewModel\Posts\PostsViewModel.cs" />
+    <Compile Include="ViewModel\SearchViewModel.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
       <SubType>Code</SubType>

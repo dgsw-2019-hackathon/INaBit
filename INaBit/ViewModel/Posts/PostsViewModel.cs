@@ -34,9 +34,9 @@ namespace INaBit.ViewModel.Posts
             Items[0].control = new WebPostControl();
             Items[1].control = new WebPostControl();
             Items[2].control = new WebPostControl();
-            Items[0].control.DataContext = new PostItemViewModel() { Recommand = 3827};
-            Items[1].control.DataContext = new PostItemViewModel() { Recommand = 7271};
-            Items[2].control.DataContext = new PostItemViewModel() { Recommand = 5261};
+            Items[0].control.DataContext = new PostItemViewModel() { Recommand = 3827,Content = "반짝이는 아이디어입니다." ,Title = Items[0].viewModel.Title};
+            Items[1].control.DataContext = new PostItemViewModel() { Recommand = 7271 , Content = "앙 기모찌", Title = Items[1].viewModel.Title };
+            Items[2].control.DataContext = new PostItemViewModel() { Recommand = 5261 , Content = "데헷", Title = Items[2].viewModel.Title };
             for (int i = 0; i < Items.Count; i++)
             {
                 Items[i].viewModel.Writer = "DGSW" + (i+1).ToString();

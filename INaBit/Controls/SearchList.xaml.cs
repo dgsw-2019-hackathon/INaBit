@@ -1,4 +1,5 @@
-﻿using System;
+﻿using INaBit.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,11 @@ namespace INaBit.Controls
     /// </summary>
     public partial class SearchList : UserControl
     {
+        public SearchViewModel viewModel = new SearchViewModel();
         public SearchList()
         {
             InitializeComponent();
+            this.DataContext = viewModel;
         }
     }
 }

@@ -36,7 +36,6 @@ namespace INaBit
 
         public static void SortAppList()
         {
-            MessageBox.Show("asd");
             if (AppListViewModel.Items.Count == 0)
             {
                 MessageBox.Show("sibal");
@@ -54,10 +53,12 @@ namespace INaBit
                 MessageBox.Show("정렬");
             }
         }
+
         public static void SortWebList()
         {
 
         }
+
         public static void SortIdeaList()
         {
 
