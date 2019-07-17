@@ -39,7 +39,7 @@ namespace INaBit.Controls.Posts
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            App.setView?.Invoke(control);
+            StaticVar.setView?.Invoke(control);
         }
     }
 }

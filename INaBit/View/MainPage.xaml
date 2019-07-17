@@ -72,7 +72,7 @@
         <Grid Grid.Row="1">
             <Grid>
                 <ScrollViewer x:Name="MainCtrl"
-                      Visibility="Visible">
+                      Visibility="Collapsed">
                     <ScrollViewer.Background>
                         <ImageBrush ImageSource="/디자인/BackGroundImage.jpg"/>
                     </ScrollViewer.Background>
@@ -126,7 +126,7 @@
                 
                 
                 
-                <ScrollViewer x:Name="LoginCtrl" Visibility="Collapsed">
+                <ScrollViewer x:Name="LoginCtrl" Visibility="Visible">
                     <ScrollViewer.Background>
                         <ImageBrush ImageSource="/디자인/BackGroundImage.jpg"/>
                     </ScrollViewer.Background>

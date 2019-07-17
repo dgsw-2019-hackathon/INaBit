@@ -24,7 +24,7 @@ namespace INaBit.Controls
         public IdeaListControl()
         {
             InitializeComponent();
-            this.DataContext = App.IdeaListViewModel;
+            this.DataContext = StaticVar.IdeaListViewModel;
         }
 
         

@@ -24,5 +24,11 @@ namespace INaBit.Controls
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            lstComment.Items.Add(StaticVar.NickName + " : " + tbComment.Text);
+            tbComment.Text = "";
+        }
     }
 }

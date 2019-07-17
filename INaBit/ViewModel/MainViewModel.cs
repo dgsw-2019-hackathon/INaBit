@@ -12,9 +12,7 @@ namespace INaBit.ViewModel
 {
     public class MainViewModel : BindableBase
     {
-        WebListControl webList;
-        AppListControl appList;
-        IdeaListControl ideaList;
+        
 
         public ICommand IdeaPageCommand { get; set; }
         public ICommand WebPageCommand { get; set; }
@@ -25,24 +23,21 @@ namespace INaBit.ViewModel
             IdeaPageCommand = new DelegateCommand(IdeaPage);
             WebPageCommand = new DelegateCommand(WebPage);
             AppPageCommand = new DelegateCommand(AppPage);
-            webList = new WebListControl();
-            appList = new AppListControl();
-            ideaList = new IdeaListControl();
         }
 
         private void AppPage()
         {
-            App.setView(appList);
+            StaticVar.setView(StaticVar.appList);
         }
 
         private void WebPage()
         {
-            App.setView(webList);
+            StaticVar.setView(StaticVar.webList);
         }
 
         private void IdeaPage()
         {
-            App.setView(ideaList);
+            StaticVar.setView(StaticVar.ideaList);
         }
     }
 }

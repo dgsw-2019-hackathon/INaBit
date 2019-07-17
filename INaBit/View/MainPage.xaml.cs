@@ -25,14 +25,15 @@ namespace INaBit
         {
             InitializeComponent();
             InitViewControl();
-            this.DataContext = App.mainViewModel;
+            this.DataContext = StaticVar.mainViewModel;
         }
 
         private void InitViewControl()
         {
-            App.loginViewModel.loginDone += LoginDone;
-            App.setView += PageView;
-            App.back += Back;
+            StaticVar.loginViewModel.loginDone += LoginDone;
+            StaticVar.setView += PageView;
+            StaticVar.back += Back;
+            StaticVar.HideBackground += HideBack;
         }
 
         public void LoginDone()
@@ -61,12 +62,17 @@ namespace INaBit
             PageGrid.Children.Clear();
         }
 
+        private void HideBack()
+        {
+            PageGrid.Children[0].Visibility = Visibility.Collapsed;
+        }
+
         private void Back()
         {
             var parent = PageGrid.Children[0];
             PageGrid.Children.Clear();
             PageGrid.Children.Add(parent);
-            MessageBox.Show(App.WebListViewModel.Items.Count.ToString());
+            MessageBox.Show(StaticVar.WebListViewModel.Items.Count.ToString());
         }
 
         private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)

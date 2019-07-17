@@ -7,53 +7,65 @@
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="800">
     <Grid>
-        <Grid Width="800" Height="100" HorizontalAlignment="Center" Margin="0,118,0,0" VerticalAlignment="Top">
-            <Border  BorderThickness="10" CornerRadius="10" Background="White" Margin="56,448,424,-444">
-                <Border.BorderBrush>
-                    <SolidColorBrush Color="Black"/>
-                </Border.BorderBrush>
-                <TextBlock FontSize="40" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Margin="43,22,64,0" TextAlignment="Center" Text="로그인"/>
-            </Border>
-        </Grid>
+        <Grid>
+            
+            <Grid Width="800" Height="500" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="537*"/>
+                    <ColumnDefinition Width="263*"/>
+                </Grid.ColumnDefinitions>
+                <Border BorderThickness="10" CornerRadius="20" BorderBrush="Black" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+                    <Border.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="0.187"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="0.997"/>
+                        </TransformGroup>
+                    </Border.RenderTransform>
+                    <Border.Background>
+                        <SolidColorBrush Color="White" Opacity="0.3"/>
+                    </Border.Background>
+                </Border>
+                <TextBlock FontSize="30" Width="60" Height="40" 
+                           Margin="0,0,50,40"
+                           FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" >
+                    <TextBlock.Background>
+                        <SolidColorBrush Color="White" Opacity="0"/>
+                    </TextBlock.Background>ID</TextBlock>
 
-        <Grid Width="800" Height="500" Margin="0,290,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="537*"/>
-                <ColumnDefinition Width="263*"/>
-            </Grid.ColumnDefinitions>
-            <Border  BorderThickness="10" CornerRadius="20" Margin="5,362,15,-206" BorderBrush="Black" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
-                <Border.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleX="0.187"/>
-                        <RotateTransform/>
-                        <TranslateTransform X="0.997"/>
-                    </TransformGroup>
-                </Border.RenderTransform>
-                <Border.Background>
-                    <SolidColorBrush Color="White" Opacity="0.3"/>
-                </Border.Background>
-            </Border>
-            <TextBlock FontSize="30" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" Margin="203,450,297,20">
-                <TextBlock.Background>
-                    <SolidColorBrush Color="White" Opacity="0"/>
-                </TextBlock.Background>ID</TextBlock>
-            <TextBox FontSize="30" Height="30" Background="White" Margin="263,450,240,20" CaretBrush="Black"
-                         Text="{Binding Id}"  BorderBrush="Black" BorderThickness="3" Grid.ColumnSpan="2"/>
+                <TextBlock FontSize="30" Width="60" Height="40" 
+                           Margin="0,50,50,0"
+                           FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" >
+                    <TextBlock.Background>
+                        <SolidColorBrush Color="White" Opacity="0"/>
+                    </TextBlock.Background>PW</TextBlock>
 
-            <TextBlock FontSize="30" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Foreground="#FF111111" Margin="203,510,279,-38">
-                <TextBlock.Background>
-                    <SolidColorBrush Color="White" Opacity="0"/>
-                </TextBlock.Background>PW</TextBlock>
-            <PasswordBox FontSize="30" Height="30" Background="White" Margin="263,510,240,-40" CaretBrush="Black"  BorderBrush="Black" BorderThickness="3" Grid.ColumnSpan="2"/>
-
-            <Button Margin="302,590,74,-136" Background="#FF33386A" Foreground="Black" FontWeight="Bold"
+                <Button Width="200" Height="40" VerticalAlignment="Bottom" 
+                        Margin="250,0,0,130" Background="#FF33386A" Foreground="Black" FontWeight="Bold"
                         Command="{Binding LoginCommand}">
 
-                <TextBlock FontSize="20" Foreground="White">
+                    <TextBlock FontSize="20" Foreground="White">
                     Login
-                </TextBlock>
-            </Button>
+                    </TextBlock>
+                </Button>
+                <TextBox FontSize="20" Width="250" Height="30" Background="White" CaretBrush="Black"
+                         Margin="0,0,0,40"
+                         Text="{Binding Id}"  BorderBrush="Black" BorderThickness="3" Grid.ColumnSpan="2"/>
+                <PasswordBox FontSize="20" 
+                             Margin="0,40,0,0"
+                             Width="250" Height="30" Background="White"  CaretBrush="Black"  BorderBrush="Black" BorderThickness="3" Grid.ColumnSpan="2"/>
+            </Grid>
+            <Grid Margin="0,0,0,600" Width="800" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Border HorizontalAlignment="Left" BorderThickness="10" CornerRadius="10" Background="White"
+                         Width="300" Margin="0,10,9,0">
+                    <Border.BorderBrush>
+                        <SolidColorBrush Color="Black"/>
+                    </Border.BorderBrush>
+                    <TextBlock FontSize="40" FontFamily="Microsoft Sans Serif" FontWeight="Bold"
+                                 TextAlignment="Center" Text="로그인"/>
+                </Border>
+            </Grid>
         </Grid>
     </Grid>
 </UserControl>

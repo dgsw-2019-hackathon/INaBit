@@ -1,5 +1,7 @@
-﻿using INaBit.ViewModel;
+﻿using INaBit.Controls;
+using INaBit.ViewModel;
 using INaBit.ViewModel.Posts;
+using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -21,6 +23,7 @@ namespace INaBit
 
         public static SetView setView;
         public static Back back;
+        public static Back HideBackground;
 
         public static PostsViewModel postsViewModel = new PostsViewModel();
         public static LoginControlViewModel loginViewModel = new LoginControlViewModel();
@@ -29,17 +32,50 @@ namespace INaBit
         public static NormalPostViewModel WebListViewModel = new NormalPostViewModel();
         public static NormalPostViewModel IdeaListViewModel = new NormalPostViewModel();
 
+    
+        public static WebListControl webList = new WebListControl();
+        public static AppListControl appList = new AppListControl();
+        public static IdeaListControl ideaList = new IdeaListControl();
+
+
+        public static void RefreshAll()
+        {
+            AppListViewModel.Items = AppListViewModel.Items;
+            WebListViewModel.Items = WebListViewModel.Items;
+            IdeaListViewModel.Items = IdeaListViewModel.Items;
+        }
+
+        public static void RefreshAppList(int constidx,int Recommand)
+        {
+            var temp = AppListViewModel.Items.Where(x => x.viewModel.ConstIdx == constidx).FirstOrDefault();
+            if(temp == null)
+            {
+                MessageBox.Show("오류");
+                return;
+            }
+            temp.viewModel.Recommand = Recommand;
+        }
+
         public static void SortAppList()
         {
-            AppListViewModel.Items = new ObservableCollection<Controls.Posts.NormalPostItemControl>(
+            var Backup = new ObservableCollection<Controls.Posts.NormalPostItemControl>();
+
+            for(int i = 0; i < AppListViewModel.Items.Count; i++)
+            {
+                Backup.Add(AppListViewModel.Items[i]);
+            }
+
+            var newItem = new ObservableCollection<Controls.Posts.NormalPostItemControl>(
                 AppListViewModel.Items.OrderByDescending(x => x.viewModel.Recommand));
 
-            for (int i = 0; i < AppListViewModel.Items.Count; i++)
+            for(int i = 0; i < AppListViewModel.Items.Count; i++)
             {
-                AppListViewModel.Items[i].viewModel = new NormalPostItemViewModel();
-                AppListViewModel.Items[i].viewModel.Idx = (i + 1);
-                MessageBox.Show("정렬");
+                newItem[i].viewModel = Backup[i].viewModel;
+                newItem[i].viewModel.Idx = (i + 1);
             }
+
+            AppListViewModel.Items = newItem;
+            
         }
         public static void SortWebList()
         {

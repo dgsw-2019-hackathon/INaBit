@@ -23,7 +23,7 @@ namespace INaBit.Controls
         public LoginControl()
         {
             InitializeComponent();
-            this.DataContext = StaticVarloginViewModel;
+            this.DataContext = StaticVar.loginViewModel;
         }
     }
 }
